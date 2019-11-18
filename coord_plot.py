@@ -1,5 +1,5 @@
 ####
-#### Plot eye samples after running record_eye_tracker_log.py
+#### Plot eye samples after running record_eye.py
 ####
 
 import matplotlib.pyplot as plt
@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 list_x = []
 list_y = []
 
+# remove duplicate tuples
 lines_seen = set() # holds lines already seen
 outfile = open('test5_clean.txt', "w")
 for line in open('test5.txt', "r"):
@@ -17,6 +18,7 @@ outfile.close()
 
 with open ('test5_clean.txt') as a:
     for line in a.readlines():
+        # clean up tuples to get only the coordinates
         tmp = line.split(",")
         tmp1 = float(tmp[0].replace("(",""))
         tmp2 = float(tmp[1].replace(")",""))       
