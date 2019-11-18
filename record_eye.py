@@ -1,6 +1,6 @@
 #####  Record data from EyeTribe untill the key "p" is pressed.
 #####  There are two output logs: pytribe's log is difficult to parse
-#####  Other log takes only current frame's average values -- its samples are duplicates 
+#####  The log (from this script) takes only current frame's average values -- its samples are duplicates 
 #####  IMPROVE : Try to make the samples better
 #####
 ##### REFERENCES : Dalmaijer, E.S., Mathôt, S., & Van der Stigchel, S. (2013). 
@@ -24,6 +24,7 @@ import keyboard
 
 # files and paths
 DIR = os.path.dirname(os.path.abspath(__file__))
+#file for storing the  pytribe tracker log
 LOGFILE = os.path.join(DIR, 'example_data_of_range.txt')
 
 # start communications with the EyeTribe tracker
@@ -32,6 +33,7 @@ tracker = EyeTribe(logfilename=LOGFILE)
 # start recording gaze data
 tracker.start_recording()
 tracker.log_message("Tracker On")
+#file for storing the tuples of coordinates
 file = open("test5.txt","a+")
 cdtn = False
 while (not cdtn):
