@@ -10,3 +10,4 @@ Project in ECP
 - [x] get better samples
 - [x] move mouse better
 - [ ] figure out why negative or out of resolution numbers
+- [ ] smooth out mouse behaviour for the above values
