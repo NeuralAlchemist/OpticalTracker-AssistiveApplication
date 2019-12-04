@@ -27,7 +27,6 @@ public class startPoint {
         SensorDataConsumer sensorDataConsumer = new SensorDataConsumer(listOfFixationSets) ;
         
         Thread consumerThread = new Thread(sensorDataConsumer) ;
-        
         consumerThread.start();
        
         
