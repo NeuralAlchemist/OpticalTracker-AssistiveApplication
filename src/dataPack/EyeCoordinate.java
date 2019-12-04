@@ -1,33 +1,67 @@
 package dataPack;
 
+
+/**
+ * Class to describe a basic 2D Point in the screen a person is looking at. This can be described as a simple<br>
+ * 1. X coordinate.<br>
+ * 2. Y coordinate.<br>
+ */
 public class EyeCoordinate {
 
+	/**
+	 * To store the x coordinate of the point being looked at.
+	 */
 	private double x ;
+	/**
+	 * To store the x coordinate of the point being looked at.
+	 */
 	private double y ;
-	public EyeCoordinate()
-	{
-		
-	}
-	
+	/**
+	 * Constructor to initialize the coordinates of the point the eye is looking at.
+	 * @param x x coordinate of the point being looked at.
+ 	 * @param y y coordinate of the point being looked at.
+	 */
 	public EyeCoordinate(double x, double y) {
 		super();
 		this.x = x;
 		this.y = y;
 	}
+	/**
+	 * Method to get the {@link dataPack.EyeCoordinate#x}.
+	 * @return {@link dataPack.EyeCoordinate#x}
+	 */
 	public double getX() {
 		return x;
 	}
+	/**
+	 * Method to set the {@link dataPack.EyeCoordinate#x}
+	 * @param x Value for the x coordinate.
+	 */
 	public void setX(double x) {
 		this.x = x;
 	}
+	/**
+	 * Method to get the {@link dataPack.EyeCoordinate#y}.
+	 * @return {@link dataPack.EyeCoordinate#y}
+	 */
 	public double getY() {
 		return y;
 	}
+	/**
+	 * Method to set the {@link dataPack.EyeCoordinate#y}
+	 * @param y Value for the y coordinate.
+	 */
 	public void setY(double y) {
 		this.y = y;
 	}
 
-	public double distanceBetweenEyeCoordinated(EyeCoordinate differentPoint)
+	/**
+	 * Method to find the distance between the current coordinate and another coordinate.
+	 * It uses the 2D Euclidean formula for finding the distance.
+	 * @param differentPoint A different {@link dataPack.EyeCoordinate}
+	 * @return Euclidean distance between the coordinates.
+	 */
+	public double getDistanceBetweenEyeCoordinated(EyeCoordinate differentPoint)
 	{
 		double x0 = x ;
 		double y0 = y ;

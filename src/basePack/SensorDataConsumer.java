@@ -1,15 +1,27 @@
 package basePack;
 
 import dataPack.FixationSet;
-import dataPack.ListOfFixationSets;
+import dataPack.QueueOfFixationSets;
 import dataPack.SmoothedEye;
 
+/**
+ * Class to consume data from the sensor.<br><p>
+ * The class takes in the fixation sets from the queue and uses them as needed. Thus, it only need 
+ * have the handle to the Queue and make use of it.
+ */
 public class SensorDataConsumer implements Runnable {
 
-	private ListOfFixationSets listOfFixationSets ;
+	/**
+	 * Handle to the queue {@link dataPack.QueueOfFixationSets}
+	 */
+	private QueueOfFixationSets queueOfFixationSets ;
 
-	public SensorDataConsumer(ListOfFixationSets listOfFixationSets) {
-		this.listOfFixationSets = listOfFixationSets ;
+	/**
+	 * Constructor to assign the queue for use.
+	 * @param queueOfFixationSets handle to the queue to be used for fixation sets.
+	 */
+	public SensorDataConsumer(QueueOfFixationSets queueOfFixationSets) {
+		this.queueOfFixationSets = queueOfFixationSets ;
 	}
 
 	@Override
@@ -21,7 +33,7 @@ public class SensorDataConsumer implements Runnable {
 		while(true)
 		{
 			try {
-				FixationSet fixationSet = listOfFixationSets.getFIFOFixationSet();
+				FixationSet fixationSet = queueOfFixationSets.getFIFOFixationSet();
 				System.out.println("FixationSet Number: "+ ++fixationSetNumber) ;
 				System.out.println("FixationPoints in Current Set: ");
 				for(SmoothedEye fs : fixationSet.getEyeCoordinatesSet())
