@@ -17,7 +17,8 @@ import dataPack.QueueOfFixationSets;;
  * 4. Get {@link basePack.SensorDataProducer} handle by passing it handle from Part 3.<br>
  * 5. Get {@link basePack.SensorDataConsumer} handle by passing it handle from Part 3.<br>
  * 6. Make thread from the handle in Part 5. <br>
- * 7. Add a shutdown hook for the handle in Part 1.<br>
+ * 7. Get {@link }
+ * 8. Add a shutdown hook for the handle in Part 1.<br>
  * @version 1.0
  * 
  */

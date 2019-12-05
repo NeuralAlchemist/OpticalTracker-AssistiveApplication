@@ -13,7 +13,7 @@ public class EyeCoordinate {
 	 */
 	private double x ;
 	/**
-	 * To store the x coordinate of the point being looked at.
+	 * To store the y coordinate of the point being looked at.
 	 */
 	private double y ;
 	/**
