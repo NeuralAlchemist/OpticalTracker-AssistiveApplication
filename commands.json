@@ -1,0 +1,17 @@
+{
+  "Command": {"Type":"Scroll up",
+  "Pixels": 1,
+  "Timestamp": "2020-09-11T00:00:00.000Z",
+  "NewData": true
+},
+  "Fixation": {
+    "Start": "2020-09-11T00:00:00.000Z",
+    "End": "2020-09-11T00:00:00.000Z",
+    "Mean": {
+      "Global": 58.5,
+      "Single": 58.2
+    },
+    "LastFixation": "1980-01-02T00:00:00.000Z",
+    "registered": true
+  }
+}
