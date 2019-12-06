@@ -1,0 +1,63 @@
+body{
+	padding: 0 30% 0 10%;
+}
+
+.scrolldown:hover img {
+  animation: moveSlideshow 3s linear;
+  animation-fill-mode: forwards;
+}
+
+.scrollup:hover img {
+  animation: moveSlideshow 3s linear;
+  animation-fill-mode: reverse;
+}
+
+#title{
+	width: 100%;
+	font-size: 30px;
+}
+
+.text{
+	line-height: 1.5;
+	font-size: 25px;
+}
+.ups {
+    width: 200px;
+    line-height: 200px;
+    overflow: hidden;
+    z-index: 999;
+    display: inline;
+    cursor: pointer;
+    position: fixed;
+    bottom: 70%;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+.downs {
+    width: 200px;
+    line-height: 200px;
+    overflow: hidden;
+    z-index: 999;
+    display: inline;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+.ups:hover {
+    background-color: #547DFE;
+    color: #000;
+}
+.downs:hover {
+    background-color: #547DFE;
+    color: #000;
+}
