@@ -1,0 +1,9 @@
+int[] rgb_arr = new int[20];
+for(int i = 0; i < rgb_arr.length; i++) {
+	rgb_arr[i] = Color.MAGENTA.getRGB();
+}
+snip.setRGB(0, 0, 20, 1, rgb_arr, 0, 20); // top-line
+snip.setRGB(0, 0, 1, 20, rgb_arr, 0, 1); // left-line
+snip.setRGB(0, 20, 20, 1, rgb_arr, 0, 20);// bottom-line
+snip.setRGB(20, 0, 1, 20, rgb_arr, 0, 1);
+//snip.setRGB(0, 0, 20, 20, rgb_arr, 0, 20);
