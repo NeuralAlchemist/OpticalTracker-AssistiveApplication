@@ -1,5 +1,11 @@
 package basePack;
 
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import com.theeyetribe.client.GazeManager;
 import com.theeyetribe.client.GazeManager.ApiVersion;
 import com.theeyetribe.client.GazeManager.ClientMode;
@@ -25,6 +31,18 @@ import dataPack.QueueOfFixationSets;;
 public class startPoint {
 
 	public static void main(String[] args) {
+		
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 300);
+		JPanel jp = new JPanel();
+		frame.setLocation(1500, 200);
+		JPanel rectangle = new JPanel();
+		rectangle.setBackground( Color.RED );
+		rectangle.setPreferredSize( new Dimension(50, 50) );
+		jp.add( rectangle );
+		frame.setVisible(true);
+		
 		
 		final GazeManager gm = GazeManager.getInstance();
         boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);

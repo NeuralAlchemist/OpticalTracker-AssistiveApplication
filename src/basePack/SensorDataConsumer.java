@@ -46,6 +46,9 @@ public class SensorDataConsumer implements Runnable {
 		this.queueOfFixationSets = queueOfFixationSets ;
 	}
 
+	/**
+	 *
+	 */
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
@@ -61,10 +64,11 @@ public class SensorDataConsumer implements Runnable {
 		long cur_milli = date.getTime();
 		long start_milli = date.getTime();
 		long duration = 500;
+		boolean prev_in_box = false;
 		
-		bt_topl = new int[]{1460,160};
-		bt_topr = new int[] {1740,160};
-		bt_botr = new int[] {1740,420};
+		bt_topl = new int[]{1500,200};
+		bt_topr = new int[] {1800,200};
+		bt_botr = new int[] {1800,500};
 		//bt_botl = new int[] {1460,420};
 		
 		// Writing the x and y values into a file.
@@ -74,16 +78,21 @@ public class SensorDataConsumer implements Runnable {
 		try {
 			snip = getSnip(1);
 			capture = new File(image_path);
+		
 		} catch (AWTException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
 		
+		
+		
 		//while((cur_milli - start_milli < duration))
 		while(true)
 		{
-			Integer[] tl, br, mean;
+			int [] tl = new int[2];
+			int [] br = new int[2];
+			int [] mean = new int[2];
 			int width, height;
 			Date cur_date = new Date();
 			cur_milli = cur_date.getTime();
@@ -104,12 +113,17 @@ public class SensorDataConsumer implements Runnable {
 						e.printStackTrace();
 					}
 				}
-				String tl_text = fixationSet.getTopLeftCornerOfFixation().toString();
-				String br_text = fixationSet.getBottomRightCornerOfFixation().toString();
-				String mean_text = fixationSet.getMeanEyeCoordinate().toString();
-				tl= getCoordinates(tl_text);
-				br = getCoordinates(br_text);
-				mean = getCoordinates(mean_text);
+
+				
+				tl[0] = (int) Math.abs(fixationSet.getTopLeftCornerOfFixation().getX());
+				tl[1] = (int)Math.abs(fixationSet.getTopLeftCornerOfFixation().getY());
+				
+				br[0] = (int)Math.abs(fixationSet.getBottomRightCornerOfFixation().getX());
+				br[1] = (int)Math.abs(fixationSet.getBottomRightCornerOfFixation().getY());
+				
+				mean[0] = (int)Math.abs(fixationSet.getMeanEyeCoordinate().getX());
+				mean[1] = (int)Math.abs(fixationSet.getMeanEyeCoordinate().getY());
+				
 				
 				width = Math.abs(tl[0] - br[0]);
 				height = Math.abs(tl[1] - br[1]);
@@ -119,33 +133,65 @@ public class SensorDataConsumer implements Runnable {
 				int[] rgb_arr_height = colorArray(height);
 				int[] rgb_arr_mean = colorArray(100);
 				
-				snip.setRGB(mean[0], mean[1], 10, 10, rgb_arr_mean, 0, 10);
 				
-				snip.setRGB(tl[0], tl[1], width, 1, rgb_arr_width, 0, width); // top-line
-				snip.setRGB(tl[0], br[1], width, 1, rgb_arr_width, 0, width); // bottom-line
-				snip.setRGB(tl[0], tl[1], 1, height, rgb_arr_height, 0, 1); // left-line
-				snip.setRGB(br[0], tl[1], 1, height, rgb_arr_height, 0, 1); // right-line
+				try {
+					snip.setRGB(mean[0], mean[1], 10, 10, rgb_arr_mean, 0, 10);
+					
+					snip.setRGB(tl[0], tl[1], width, 1, rgb_arr_width, 0, width); // top-line
+					snip.setRGB(tl[0], br[1], width, 1, rgb_arr_width, 0, width); // bottom-line
+					snip.setRGB(tl[0], tl[1], 1, height, rgb_arr_height, 0, 1); // left-line
+					snip.setRGB(br[0], tl[1], 1, height, rgb_arr_height, 0, 1); // right-line
+				} catch (Exception e) {
+					System.out.println("out of bonds probably");
+	
+				}
 				
 				// Draw rectangular fixation blocks 
 				ImageIO.write(snip, "jpg", capture);
 				
 				//Check if inside the button
-				if (mean[0] < bt_topl[0] && mean[0] < bt_topr[0]) {
+				/*
+				if (mean[0] > bt_topl[0] && mean[0] < bt_topr[0]) {
+					System.out.println("First if");
 					if(mean[1] > bt_topl[1] && mean[1] < bt_botr[1]) {
 						cur_milli = cur_date.getTime();
-						if(cur_milli - start_milli < duration) {
+						System.out.println("second if "+cur_milli + " " + (cur_milli - start_milli));
+						if(cur_milli - start_milli > duration) {
 							System.out.println("Send command, scroll up");
 						}
-					}
-					
-				}
-				else {
+					} else {
+						start_milli = cur_date.getTime();
+					}		
+				}else {
 					start_milli = cur_date.getTime();
+				} */
+				
+				
+				if (mean[0] > bt_topl[0] && mean[0] < bt_topr[0]) {
+					System.out.println("First if : check x ");
+					if(mean[1] > bt_topl[1] && mean[1] < bt_botr[1]) {
+						System.out.println("Second if : Checked Y");
+						if(prev_in_box) {
+							System.out.println("Third if :previously in box ");
+							cur_milli = fixationSet.getStopTimeStamp();
+							
+						} else {
+							start_milli = fixationSet.getStartTimeStamp();
+						}
+						prev_in_box = true;
+						if(cur_milli - start_milli > duration) {
+							System.out.println("Send Command");
+						} 
+					} else {
+						prev_in_box = false;
+					}
+				} else {
+					prev_in_box = false;
 				}
 				
 				// Listen
-				System.out.println("Top Left Position: " + tl[0] + "," + tl[1]);
-				System.out.println("Bottom Right Position: "+ br[0] + "," + br[1]);
+				//System.out.println("Top Left Position: " + tl[0] + "," + tl[1]);
+				//System.out.println("Bottom Right Position: "+ br[0] + "," + br[1]);
 
 			} catch (InterruptedException e) {
 				System.out.println("Could Not receive fixations set from the list!");
@@ -158,20 +204,9 @@ public class SensorDataConsumer implements Runnable {
 		//System.out.println("Stopping program");
 		//System.exit(0);
 	}
-	
-	
+
+		
 	// Supporting methods
-	public static Integer[] getCoordinates(String s) {
-		Integer[] result = new Integer[2];
-		String[] split = s.split("\\[");
-		String[] split2 = split[1].split("\\]");
-		String[] split3 = split2[0].split(",");
-		String[] x = split3[0].split("=");
-		result[0] = (int) Math.ceil(Double.parseDouble(x[1]));
-		String[] y = split3[1].split("=");
-		result[1] = (int)Math.ceil(Double.parseDouble(y[1]));
-		return result;
-	}
 	
 	// Creates a file at specified path
 	public static File initFile(String path_text) {
