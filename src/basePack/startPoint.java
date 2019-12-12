@@ -44,6 +44,18 @@ public class startPoint {
 		frame.setVisible(true);
 		
 		
+		JFrame frame1 = new JFrame();
+		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame1.setSize(300, 300);
+		JPanel jp1 = new JPanel();
+		frame1.setLocation(1500, 600);
+		JPanel rectangle1 = new JPanel();
+		rectangle1.setBackground( Color.RED );
+		rectangle1.setPreferredSize( new Dimension(50, 50) );
+		jp1.add( rectangle1 );
+		frame1.setVisible(true);
+		
+		
 		final GazeManager gm = GazeManager.getInstance();
         boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
 
