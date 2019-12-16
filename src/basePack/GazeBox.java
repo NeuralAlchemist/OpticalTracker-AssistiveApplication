@@ -2,6 +2,12 @@ package basePack;
 
 import dataPack.FixationSet;
 
+/**
+ * This class uses the boundaries of a scroll button to check if 
+ * the user intends to use a particular button.
+ *
+ */
+
 public class GazeBox {
 	int[] tl;
 	int[] br;
@@ -9,13 +15,29 @@ public class GazeBox {
 	long duration;
 	boolean prev_in_box = false;
 	
-public GazeBox (int[] bt_tl, int[] bt_br, long sm, long d) {
-	tl = bt_tl;
-	br = bt_br;
-	start_milli = sm; 
-	duration = d;
+	/**
+	 * Constructor to initialize a scroll button and it's properties with the following parameters
+	 * @param bt_tl The top left 2D coordinates of the button
+	 * @param bt_br The bottom right 2D coordinates of the button
+	 * @param sm	The time from which user's gaze is counted
+	 * @param d Minimum amount of time in milliseconds that a user must gaze at the button to use it
+	 */
+	
+	public GazeBox (int[] bt_tl, int[] bt_br, long sm, long d) {
+		tl = bt_tl;
+		br = bt_br;
+		start_milli = sm; 
+		duration = d;
 }
 
+/**
+ * Method from class GazeBox to check if the user intends to use a button or not
+ * @param mean	The mean of the eye coordinates from the fixationSet sent separately
+ * @param fixationSet {@link dataPack.FixationSet}
+ * @see Class FixationSet
+ * @return a boolean that is true if the user intends to use the button. False, otherwise.
+ */
+	
 public boolean CheckGazeInBox(int[] mean, FixationSet fixationSet) {
 	boolean send = false;
 	if (mean[0] > tl[0] && mean[0] < br[0]) {

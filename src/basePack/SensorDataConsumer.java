@@ -18,8 +18,9 @@ import basePack.GazeBox;
 
 /**
  * Class to consume data from the sensor.<br><p>
- * The class takes in the fixation sets from the queue and uses them as needed. Thus, it only need 
- * have the handle to the Queue and make use of it.
+ * The class takes in the fixation sets from the queue and uses them. Thus, it only need 
+ * have the handle to the Queue and make use of it. This class will send commands to the 
+ * webserver to control the scroll actions.
  */
 public class SensorDataConsumer implements Runnable {
 
@@ -73,6 +74,9 @@ public class SensorDataConsumer implements Runnable {
 		down_topl = new int[] {1500,600};
 		down_botr = new int[] {1800, 900};
 		
+		/**
+		 * 
+		 */
 		GazeBox ScrollUp = new GazeBox(up_topl, up_botr, start_milli, duration);
 		GazeBox ScrollDown = new GazeBox(down_topl, down_botr, start_milli, duration);
 		/**
