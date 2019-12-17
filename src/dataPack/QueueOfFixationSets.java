@@ -46,6 +46,11 @@ public class QueueOfFixationSets {
 	{
 		return queueOfFixationSets.take() ;
 	}
-
+	
+	
+	public FixationSet peekFIFOFixationSet() throws NullPointerException
+	{
+		return queueOfFixationSets.peek() ;
+	}
 
 }
