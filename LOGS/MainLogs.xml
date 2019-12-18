@@ -46,3 +46,135 @@
   <message>Successfully Connected to Eye Tribe Sensor.</message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:14:16.527704Z</date>
+  <millis>1576638856527</millis>
+  <nanos>704000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:18:06.074718Z</date>
+  <millis>1576639086074</millis>
+  <nanos>718000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:22:20.203497Z</date>
+  <millis>1576639340203</millis>
+  <nanos>497000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:23:26.579609Z</date>
+  <millis>1576639406579</millis>
+  <nanos>609000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:27:29.667625Z</date>
+  <millis>1576639649667</millis>
+  <nanos>625000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:56:18.147491Z</date>
+  <millis>1576641378147</millis>
+  <nanos>491000</nanos>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>basePack.startPoint</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Successfully Connected to Eye Tribe Sensor.</message>
+</record>
+</log>

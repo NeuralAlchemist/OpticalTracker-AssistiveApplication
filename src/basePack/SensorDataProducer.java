@@ -32,6 +32,8 @@ public class SensorDataProducer implements IGazeListener {
 	private final static Logger logger = Logger.getLogger(SensorDataProducer.class.getName()) ;
 	private final static String LogFileLocation = "/Users/sagarshubham/eclipse-java-workspace/"
 			+ "eyeTribe/LOGS/SensorDataProducerLogs.xml" ;
+	static int fixationSetID = 0 ;
+	
 	/**
 	 * Ongoing fixation set within which current data can be added.
 	 */
@@ -80,7 +82,6 @@ public class SensorDataProducer implements IGazeListener {
 	public void onGazeUpdate(GazeData gazeData) {
 		String gazeDataString = new Gson().toJson(gazeData) ;
 		logger.fine("Data Collected: "+ gazeDataString);
-		int fixationSetID = 0 ;
 		if(gazeData.isFixated)
 		{
 			if(currentFixationSet == null)

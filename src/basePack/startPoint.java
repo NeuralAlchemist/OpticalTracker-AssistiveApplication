@@ -2,7 +2,11 @@ package basePack;
 
 
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
@@ -11,13 +15,15 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import com.theeyetribe.client.GazeManager;
 import com.theeyetribe.client.GazeManager.ApiVersion;
 import com.theeyetribe.client.GazeManager.ClientMode;
 
-//import commandPack.CommandAttribute;
-//import commandPack.Commands;
-//import commandPack.ScrollUp;
+import commandPack.JsonToGazeBoxList;
+import dataPack.GazeBox;
 import dataPack.QueueOfFixationSets;
 
 
@@ -63,23 +69,38 @@ public class startPoint {
 			logger.log(Level.SEVERE,"Cannot Create File Logger!",e) ;
 		}
 	}
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 
+		
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 300);
+		frame.setLocation(1000, 200);
+		frame.setVisible(true);
+		
+		
+		JFrame frame1 = new JFrame();
+		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame1.setSize(300, 300);
+		frame1.setLocation(1000, 600);
+		frame1.setVisible(true);
+		
 		createLoggers() ;
 
 
 
 		final GazeManager gm = GazeManager.getInstance();
 		boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
-		
+
 		if (success)
 		{
 			logger.info("Successfully Connected to Eye Tribe Sensor.");
 		}
 		else
 		{
-			logger.severe("Could not connect to Eye Tribe Sensor! Check Physical Connections.");
-			throw new Exception("Could not connect to Eye Tribe Sensor! Check Physical Connections.") ;
+			logger.severe("Could not connect to Eye Tribe Sensor!\n"
+					+ "Check Physical Connections And Restart Code.");
+			while(true) ;
 		}
 
 		System.out.println("Hello, World! Activation: "+ success);
@@ -93,16 +114,28 @@ public class startPoint {
 		gm.addGazeListener(gazeProuducerListener);
 
 
-		SensorDataConsumer sensorDataConsumer = new SensorDataConsumer(queueOfFixationSets) ;
+		ArrayList<GazeBox> gazeBoxList = null;
+
+
+		try 
+		{
+			gazeBoxList = JsonToGazeBoxList.getGazeBoxList();
+		} 
+		catch (FileNotFoundException e) 
+		{
+			logger.log(Level.SEVERE, "Could not find Json file to load button data.\n"
+					+ "Place it in correct directory and restart the code. ",e) ;
+			while(true) ;
+		}
+		for(GazeBox gb : gazeBoxList)
+		{
+			System.out.println(gb);
+		}
+
+		SensorDataConsumer sensorDataConsumer = new SensorDataConsumer(queueOfFixationSets,gazeBoxList) ;
 
 		Thread consumerThread = new Thread(sensorDataConsumer) ;
 		consumerThread.start();
-
-//		CommandAttribute cm = new ScrollUp(5) ;
-//		Commands c = new Commands("Scroll Up",cm) ;
-//		
-
-
 
 
 		Runtime.getRuntime().addShutdownHook(new Thread()

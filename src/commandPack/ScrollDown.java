@@ -1,8 +1,12 @@
 package commandPack;
 
-import com.google.gson.Gson;
 
 public class ScrollDown extends CommandAttribute {
+
+	@Override
+	public String toString() {
+		return "ScrollDown [pixelCount=" + pixelCount + "]";
+	}
 
 	private int pixelCount ;
 	
@@ -19,12 +23,5 @@ public class ScrollDown extends CommandAttribute {
 		this.pixelCount = pixelCount;
 	}
 
-	@Override
-	public String toJSON() {
-		
-		return new Gson().toJson(this) ;
-	}
-
-	
 
 }

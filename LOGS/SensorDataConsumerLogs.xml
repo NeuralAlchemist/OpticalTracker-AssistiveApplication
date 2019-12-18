@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:14:25.257376Z</date>
+  <millis>1576638865257</millis>
+  <nanos>376000</nanos>
+  <sequence>231</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>24</thread>
+  <message>out of bonds probably to draw box.</message>
+</record>
+<record>
+  <date>2019-12-18T03:14:25.701598Z</date>
+  <millis>1576638865701</millis>
+  <nanos>598000</nanos>
+  <sequence>244</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>24</thread>
+  <message>out of bonds probably to draw box.</message>
+</record>
+<record>
+  <date>2019-12-18T03:14:30.213396Z</date>
+  <millis>1576638870213</millis>
+  <nanos>396000</nanos>
+  <sequence>367</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>24</thread>
+  <message>out of bonds probably to draw box.</message>
+</record>
+<record>
+  <date>2019-12-18T03:14:32.584049Z</date>
+  <millis>1576638872584</millis>
+  <nanos>49000</nanos>
+  <sequence>432</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>24</thread>
+  <message>out of bonds probably to draw box.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:23:32.403689Z</date>
+  <millis>1576639412403</millis>
+  <nanos>689000</nanos>
+  <sequence>158</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1106.0438, y=942.1648] EyeCoordinate [x=1135.7179, y=975.8345]</message>
+</record>
+<record>
+  <date>2019-12-18T03:23:43.095584Z</date>
+  <millis>1576639423095</millis>
+  <nanos>584000</nanos>
+  <sequence>448</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1052.5166, y=940.5414] EyeCoordinate [x=1068.6671, y=941.8406]</message>
+</record>
+<record>
+  <date>2019-12-18T03:24:54.632549Z</date>
+  <millis>1576639494632</millis>
+  <nanos>549000</nanos>
+  <sequence>2374</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=914.959, y=1017.5805] EyeCoordinate [x=916.9534, y=1024.568]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:13.879163Z</date>
+  <millis>1576639513879</millis>
+  <nanos>163000</nanos>
+  <sequence>2891</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=591.5006, y=901.147] EyeCoordinate [x=591.5006, y=901.147]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:15.695379Z</date>
+  <millis>1576639515695</millis>
+  <nanos>379000</nanos>
+  <sequence>2941</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=733.7827, y=911.5698] EyeCoordinate [x=760.8248, y=929.0016]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:18.947949Z</date>
+  <millis>1576639518947</millis>
+  <nanos>949000</nanos>
+  <sequence>3027</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1017.69, y=905.0073] EyeCoordinate [x=1028.8932, y=940.2356]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:19.872981Z</date>
+  <millis>1576639519872</millis>
+  <nanos>981000</nanos>
+  <sequence>3050</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=978.6682, y=932.2564] EyeCoordinate [x=1019.1614, y=952.3578]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:27.200653Z</date>
+  <millis>1576639527200</millis>
+  <nanos>653000</nanos>
+  <sequence>3238</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1190.1479, y=917.5897] EyeCoordinate [x=1201.9261, y=941.8225]</message>
+</record>
+<record>
+  <date>2019-12-18T03:25:27.572749Z</date>
+  <millis>1576639527572</millis>
+  <nanos>749000</nanos>
+  <sequence>3246</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1188.2137, y=892.4795] EyeCoordinate [x=1194.3301, y=895.6792]</message>
+</record>
+<record>
+  <date>2019-12-18T03:26:06.726311Z</date>
+  <millis>1576639566726</millis>
+  <nanos>311000</nanos>
+  <sequence>4304</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=659.382, y=1279.7954] EyeCoordinate [x=659.382, y=1279.7954]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:05.318041Z</date>
+  <millis>1576639625318</millis>
+  <nanos>41000</nanos>
+  <sequence>5871</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1196.1219, y=968.8215] EyeCoordinate [x=1197.2719, y=977.113]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:06.363454Z</date>
+  <millis>1576639626363</millis>
+  <nanos>454000</nanos>
+  <sequence>5899</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1093.9337, y=937.4103] EyeCoordinate [x=1097.4543, y=958.999]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:10.052759Z</date>
+  <millis>1576639630052</millis>
+  <nanos>759000</nanos>
+  <sequence>5999</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1150.0706, y=901.5167] EyeCoordinate [x=1159.424, y=921.5902]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:13.569886Z</date>
+  <millis>1576639633569</millis>
+  <nanos>886000</nanos>
+  <sequence>6092</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1131.0653, y=952.8401] EyeCoordinate [x=1153.6848, y=984.9209]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:13.793623Z</date>
+  <millis>1576639633793</millis>
+  <nanos>623000</nanos>
+  <sequence>6099</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1155.0441, y=957.378] EyeCoordinate [x=1155.0441, y=957.378]</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:27:30.866828Z</date>
+  <millis>1576639650866</millis>
+  <nanos>828000</nanos>
+  <sequence>33</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1204.8019241379318, y=533.702155172414]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:32.744601Z</date>
+  <millis>1576639652744</millis>
+  <nanos>601000</nanos>
+  <sequence>85</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1200.4244162790692, y=738.6294418604652]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:32.893056Z</date>
+  <millis>1576639652893</millis>
+  <nanos>56000</nanos>
+  <sequence>90</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1198.9027, y=719.0738]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:32.966099Z</date>
+  <millis>1576639652966</millis>
+  <nanos>99000</nanos>
+  <sequence>93</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1198.1302, y=716.9942]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:35.178616Z</date>
+  <millis>1576639655178</millis>
+  <nanos>616000</nanos>
+  <sequence>154</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1169.351622222222, y=422.596711111111]</message>
+</record>
+<record>
+  <date>2019-12-18T03:27:37.590628Z</date>
+  <millis>1576639657590</millis>
+  <nanos>628000</nanos>
+  <sequence>220</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1055.2467890909093, y=399.41415090909106]</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-18T03:56:19.519455Z</date>
+  <millis>1576641379519</millis>
+  <nanos>455000</nanos>
+  <sequence>35</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=963.0557960000001, y=327.535448]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:19.970928Z</date>
+  <millis>1576641379970</millis>
+  <nanos>928000</nanos>
+  <sequence>49</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1017.1626500000001, y=675.5479666666666]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:22.073985Z</date>
+  <millis>1576641382073</millis>
+  <nanos>985000</nanos>
+  <sequence>107</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1008.2447423076919, y=556.6188134615385]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:22.748363Z</date>
+  <millis>1576641382748</millis>
+  <nanos>363000</nanos>
+  <sequence>126</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1807.9225666666669, y=769.7355000000001]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:22.748996Z</date>
+  <millis>1576641382748</millis>
+  <nanos>996000</nanos>
+  <sequence>127</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1801.4493, y=764.6229] EyeCoordinate [x=1819.3053, y=772.5955]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:23.341850Z</date>
+  <millis>1576641383341</millis>
+  <nanos>850000</nanos>
+  <sequence>144</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1824.85318, y=799.02884]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:23.342160Z</date>
+  <millis>1576641383342</millis>
+  <nanos>160000</nanos>
+  <sequence>145</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1820.2753, y=793.2529] EyeCoordinate [x=1829.421, y=801.2932]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:23.813209Z</date>
+  <millis>1576641383813</millis>
+  <nanos>209000</nanos>
+  <sequence>159</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=882.1656333333334, y=278.5003]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:25.441504Z</date>
+  <millis>1576641385441</millis>
+  <nanos>504000</nanos>
+  <sequence>204</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=779.3771435897438, y=254.31002820512833]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:26.265311Z</date>
+  <millis>1576641386265</millis>
+  <nanos>311000</nanos>
+  <sequence>227</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=984.0174857142857, y=555.2449571428572]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:27.896470Z</date>
+  <millis>1576641387896</millis>
+  <nanos>470000</nanos>
+  <sequence>271</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1101.2332535714281, y=94.51766785714287]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:29.441691Z</date>
+  <millis>1576641389441</millis>
+  <nanos>691000</nanos>
+  <sequence>314</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=850.4033968750001, y=512.1555656250001]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:30.698383Z</date>
+  <millis>1576641390698</millis>
+  <nanos>383000</nanos>
+  <sequence>349</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=576.3367812500002, y=338.00887500000005]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:31.256711Z</date>
+  <millis>1576641391256</millis>
+  <nanos>711000</nanos>
+  <sequence>365</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=674.585, y=327.2874]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:31.768998Z</date>
+  <millis>1576641391768</millis>
+  <nanos>998000</nanos>
+  <sequence>380</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=551.358175, y=278.97235]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:32.546030Z</date>
+  <millis>1576641392546</millis>
+  <nanos>30000</nanos>
+  <sequence>402</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=898.6427166666667, y=516.1127666666666]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:33.036272Z</date>
+  <millis>1576641393036</millis>
+  <nanos>272000</nanos>
+  <sequence>416</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1023.6213333333334, y=910.5740333333333]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:33.036428Z</date>
+  <millis>1576641393036</millis>
+  <nanos>428000</nanos>
+  <sequence>417</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1023.5427, y=901.751] EyeCoordinate [x=1023.6768, y=915.5732]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:33.547602Z</date>
+  <millis>1576641393547</millis>
+  <nanos>602000</nanos>
+  <sequence>432</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1139.010425, y=917.59915]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:33.548059Z</date>
+  <millis>1576641393548</millis>
+  <nanos>59000</nanos>
+  <sequence>433</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1135.9817, y=902.2911] EyeCoordinate [x=1140.2473, y=924.2753]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:34.073168Z</date>
+  <millis>1576641394073</millis>
+  <nanos>168000</nanos>
+  <sequence>448</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1149.9866333333332, y=933.2460333333333]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:34.073334Z</date>
+  <millis>1576641394073</millis>
+  <nanos>334000</nanos>
+  <sequence>449</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1149.4683, y=927.1224] EyeCoordinate [x=1150.5769, y=942.7188]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:34.991470Z</date>
+  <millis>1576641394991</millis>
+  <nanos>470000</nanos>
+  <sequence>475</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=624.95064, y=279.4971099999999]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:35.474967Z</date>
+  <millis>1576641395474</millis>
+  <nanos>967000</nanos>
+  <sequence>489</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=989.3000333333333, y=216.19083333333333]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:35.989268Z</date>
+  <millis>1576641395989</millis>
+  <nanos>268000</nanos>
+  <sequence>504</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1024.196725, y=442.973475]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:38.173064Z</date>
+  <millis>1576641398173</millis>
+  <nanos>64000</nanos>
+  <sequence>564</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1035.5214518518517, y=345.3757981481481]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:38.234159Z</date>
+  <millis>1576641398234</millis>
+  <nanos>159000</nanos>
+  <sequence>566</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>INFO</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>Sent Command: {"commandID":1,"commandInstruction":"Scroll Up","commandAttribute":{"pixelCount":10},"hasCommandBeenExecutedByServer":false}</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:38.801305Z</date>
+  <millis>1576641398801</millis>
+  <nanos>305000</nanos>
+  <sequence>583</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1051.6487857142859, y=528.3555285714285]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:39.324831Z</date>
+  <millis>1576641399324</millis>
+  <nanos>831000</nanos>
+  <sequence>598</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1083.2671, y=302.8704]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:40.392665Z</date>
+  <millis>1576641400392</millis>
+  <nanos>665000</nanos>
+  <sequence>628</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=286.7537111111111, y=366.91920000000005]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:41.391618Z</date>
+  <millis>1576641401391</millis>
+  <nanos>618000</nanos>
+  <sequence>656</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=433.5065294117647, y=338.29212352941175]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:41.733956Z</date>
+  <millis>1576641401733</millis>
+  <nanos>956000</nanos>
+  <sequence>666</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=582.15065, y=364.363625]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:42.503114Z</date>
+  <millis>1576641402503</millis>
+  <nanos>114000</nanos>
+  <sequence>688</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=283.3561909090909, y=383.54458181818177]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:43.060239Z</date>
+  <millis>1576641403060</millis>
+  <nanos>239000</nanos>
+  <sequence>704</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=421.49517000000003, y=362.0553]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:43.579911Z</date>
+  <millis>1576641403579</millis>
+  <nanos>911000</nanos>
+  <sequence>719</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=555.4143777777779, y=395.48036666666667]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:44.093856Z</date>
+  <millis>1576641404093</millis>
+  <nanos>856000</nanos>
+  <sequence>734</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=650.4499777777778, y=382.6958555555555]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:45.281696Z</date>
+  <millis>1576641405281</millis>
+  <nanos>696000</nanos>
+  <sequence>767</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1029.6042227272726, y=725.8898681818182]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:49.320155Z</date>
+  <millis>1576641409320</millis>
+  <nanos>155000</nanos>
+  <sequence>877</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1031.218954629631, y=681.6710870370371]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:49.379802Z</date>
+  <millis>1576641409379</millis>
+  <nanos>802000</nanos>
+  <sequence>879</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>INFO</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>Sent Command: {"commandID":1,"commandInstruction":"Scroll Down","commandAttribute":{"pixelCount":12},"hasCommandBeenExecutedByServer":false}</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:49.979286Z</date>
+  <millis>1576641409979</millis>
+  <nanos>286000</nanos>
+  <sequence>897</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=733.2058000000001, y=369.1979625]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:51.056535Z</date>
+  <millis>1576641411056</millis>
+  <nanos>535000</nanos>
+  <sequence>927</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=678.6844, y=390.1572666666667]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:51.466250Z</date>
+  <millis>1576641411466</millis>
+  <nanos>250000</nanos>
+  <sequence>939</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1021.1858, y=550.1627]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:58.385206Z</date>
+  <millis>1576641418385</millis>
+  <nanos>206000</nanos>
+  <sequence>1127</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=934.1879135593216, y=365.7733615819212]</message>
+</record>
+<record>
+  <date>2019-12-18T03:56:59.201418Z</date>
+  <millis>1576641419201</millis>
+  <nanos>418000</nanos>
+  <sequence>1150</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=897.4635823529413, y=343.2169352941177]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:00.603068Z</date>
+  <millis>1576641420603</millis>
+  <nanos>68000</nanos>
+  <sequence>1189</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=667.8316500000001, y=425.09036428571426]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:06.964438Z</date>
+  <millis>1576641426964</millis>
+  <nanos>438000</nanos>
+  <sequence>1362</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1019.9796067901239, y=292.8230598765434]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:07.864081Z</date>
+  <millis>1576641427864</millis>
+  <nanos>81000</nanos>
+  <sequence>1387</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=690.8154428571428, y=417.9223642857142]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:08.676940Z</date>
+  <millis>1576641428676</millis>
+  <nanos>940000</nanos>
+  <sequence>1410</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=956.32895, y=912.0145333333331]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:08.677204Z</date>
+  <millis>1576641428677</millis>
+  <nanos>204000</nanos>
+  <sequence>1411</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=927.4127, y=897.0639] EyeCoordinate [x=987.868, y=918.3773]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:09.226957Z</date>
+  <millis>1576641429226</millis>
+  <nanos>957000</nanos>
+  <sequence>1427</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1092.19803, y=923.85148]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:09.227071Z</date>
+  <millis>1576641429227</millis>
+  <nanos>71000</nanos>
+  <sequence>1428</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1086.1254, y=919.6163] EyeCoordinate [x=1100.2793, y=926.3757]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:10.228068Z</date>
+  <millis>1576641430228</millis>
+  <nanos>68000</nanos>
+  <sequence>1456</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=538.6245529411765, y=440.9559411764706]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:11.007877Z</date>
+  <millis>1576641431007</millis>
+  <nanos>877000</nanos>
+  <sequence>1478</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=292.17808181818185, y=455.7679727272727]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:12.082153Z</date>
+  <millis>1576641432082</millis>
+  <nanos>153000</nanos>
+  <sequence>1508</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1157.0780842105266, y=926.9681263157894]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:12.082243Z</date>
+  <millis>1576641432082</millis>
+  <nanos>243000</nanos>
+  <sequence>1509</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1134.0826, y=916.3] EyeCoordinate [x=1170.6769, y=946.8287]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:13.629523Z</date>
+  <millis>1576641433629</millis>
+  <nanos>523000</nanos>
+  <sequence>1552</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=999.3976411764704, y=900.0774705882354]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:13.629667Z</date>
+  <millis>1576641433629</millis>
+  <nanos>667000</nanos>
+  <sequence>1553</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=981.84, y=881.0997] EyeCoordinate [x=1022.0541, y=904.4651]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:15.262007Z</date>
+  <millis>1576641435262</millis>
+  <nanos>7000</nanos>
+  <sequence>1598</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=385.15711379310346, y=449.8832103448276]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:15.662061Z</date>
+  <millis>1576641435662</millis>
+  <nanos>61000</nanos>
+  <sequence>1610</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=317.0351, y=385.7411]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:18.775993Z</date>
+  <millis>1576641438775</millis>
+  <nanos>993000</nanos>
+  <sequence>1695</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=284.5910424242425, y=383.43598181818174]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:19.252096Z</date>
+  <millis>1576641439252</millis>
+  <nanos>96000</nanos>
+  <sequence>1709</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=168.6318, y=225.7652]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:20.073807Z</date>
+  <millis>1576641440073</millis>
+  <nanos>807000</nanos>
+  <sequence>1732</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=160.67420588235294, y=224.83532941176475]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:20.993639Z</date>
+  <millis>1576641440993</millis>
+  <nanos>639000</nanos>
+  <sequence>1758</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=264.71532, y=381.75414]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:24.357831Z</date>
+  <millis>1576641444357</millis>
+  <nanos>831000</nanos>
+  <sequence>1850</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=999.7229987654322, y=222.26337160493827]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:26.102408Z</date>
+  <millis>1576641446102</millis>
+  <nanos>408000</nanos>
+  <sequence>1898</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=985.8112863636361, y=211.1543113636363]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:26.434547Z</date>
+  <millis>1576641446434</millis>
+  <nanos>547000</nanos>
+  <sequence>1908</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=970.9055125, y=221.264975]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:26.914548Z</date>
+  <millis>1576641446914</millis>
+  <nanos>548000</nanos>
+  <sequence>1922</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=751.5397333333334, y=191.85433333333336]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:27.621185Z</date>
+  <millis>1576641447621</millis>
+  <nanos>185000</nanos>
+  <sequence>1942</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=319.523275, y=438.9004]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:27.917317Z</date>
+  <millis>1576641447917</millis>
+  <nanos>317000</nanos>
+  <sequence>1951</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=246.1439333333333, y=465.5205]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:29.438747Z</date>
+  <millis>1576641449438</millis>
+  <nanos>747000</nanos>
+  <sequence>1993</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=957.789293548387, y=605.2829903225808]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:31.399805Z</date>
+  <millis>1576641451399</millis>
+  <nanos>805000</nanos>
+  <sequence>2047</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=756.8857441860466, y=453.4038744186047]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:33.138716Z</date>
+  <millis>1576641453138</millis>
+  <nanos>716000</nanos>
+  <sequence>2095</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=969.8130727272727, y=830.4325636363635]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:33.949493Z</date>
+  <millis>1576641453949</millis>
+  <nanos>493000</nanos>
+  <sequence>2118</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=969.9823352941177, y=864.3407588235294]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:35.093325Z</date>
+  <millis>1576641455093</millis>
+  <nanos>325000</nanos>
+  <sequence>2150</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=323.40650000000005, y=379.0401625]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:36.095452Z</date>
+  <millis>1576641456095</millis>
+  <nanos>452000</nanos>
+  <sequence>2178</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=461.8331428571429, y=177.63854285714282]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:36.835839Z</date>
+  <millis>1576641456835</millis>
+  <nanos>839000</nanos>
+  <sequence>2199</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=497.55155333333335, y=41.59238]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:37.462425Z</date>
+  <millis>1576641457462</millis>
+  <nanos>425000</nanos>
+  <sequence>2217</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=970.72055, y=346.77445]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:38.432678Z</date>
+  <millis>1576641458432</millis>
+  <nanos>678000</nanos>
+  <sequence>2244</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1159.17810625, y=917.2919250000001]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:38.432929Z</date>
+  <millis>1576641458432</millis>
+  <nanos>929000</nanos>
+  <sequence>2245</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>WARNING</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>createFixationBox</method>
+  <thread>25</thread>
+  <message>Out of bonds probably to draw box.EyeCoordinate [x=1152.1017, y=899.2617] EyeCoordinate [x=1164.5215, y=927.9307]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:38.833727Z</date>
+  <millis>1576641458833</millis>
+  <nanos>727000</nanos>
+  <sequence>2257</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=738.1737, y=479.2498]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:39.423327Z</date>
+  <millis>1576641459423</millis>
+  <nanos>327000</nanos>
+  <sequence>2274</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1012.3116833333333, y=503.4837333333333]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:40.646636Z</date>
+  <millis>1576641460646</millis>
+  <nanos>636000</nanos>
+  <sequence>2308</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=279.3148347826088, y=498.4992956521739]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:41.424958Z</date>
+  <millis>1576641461424</millis>
+  <nanos>958000</nanos>
+  <sequence>2330</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1039.3960545454547, y=335.9947090909091]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:42.497293Z</date>
+  <millis>1576641462497</millis>
+  <nanos>293000</nanos>
+  <sequence>2360</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1091.4066421052632, y=620.7498052631579]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:54.456817Z</date>
+  <millis>1576641474456</millis>
+  <nanos>817000</nanos>
+  <sequence>2684</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1056.5842968553475, y=623.0612443396224]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:54.516758Z</date>
+  <millis>1576641474516</millis>
+  <nanos>758000</nanos>
+  <sequence>2686</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>INFO</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>Sent Command: {"commandID":1,"commandInstruction":"Scroll Down","commandAttribute":{"pixelCount":12},"hasCommandBeenExecutedByServer":false}</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:55.195471Z</date>
+  <millis>1576641475195</millis>
+  <nanos>471000</nanos>
+  <sequence>2706</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1085.3572399999998, y=356.62395000000004]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:56.302533Z</date>
+  <millis>1576641476302</millis>
+  <nanos>533000</nanos>
+  <sequence>2737</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=303.0293349999999, y=579.1924200000001]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:56.860128Z</date>
+  <millis>1576641476860</millis>
+  <nanos>128000</nanos>
+  <sequence>2753</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=502.08248000000003, y=551.9299000000001]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:57.632721Z</date>
+  <millis>1576641477632</millis>
+  <nanos>721000</nanos>
+  <sequence>2775</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=642.6258187500001, y=554.53179375]</message>
+</record>
+<record>
+  <date>2019-12-18T03:57:58.454081Z</date>
+  <millis>1576641478454</millis>
+  <nanos>81000</nanos>
+  <sequence>2798</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1010.3063111111112, y=210.6050333333333]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:00.153601Z</date>
+  <millis>1576641480153</millis>
+  <nanos>601000</nanos>
+  <sequence>2845</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1005.4542853658534, y=179.88073414634147]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:01.518206Z</date>
+  <millis>1576641481518</millis>
+  <nanos>206000</nanos>
+  <sequence>2883</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1047.583834375, y=253.37332499999994]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:02.371293Z</date>
+  <millis>1576641482371</millis>
+  <nanos>293000</nanos>
+  <sequence>2907</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=934.1745076923075, y=187.16323076923072]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:19.324443Z</date>
+  <millis>1576641499324</millis>
+  <nanos>443000</nanos>
+  <sequence>3366</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1057.3098587053564, y=326.7474716517859]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:21.841684Z</date>
+  <millis>1576641501841</millis>
+  <nanos>684000</nanos>
+  <sequence>3435</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=1024.3659596491225, y=334.4118999999999]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:21.899942Z</date>
+  <millis>1576641501899</millis>
+  <nanos>942000</nanos>
+  <sequence>3437</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>INFO</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>Sent Command: {"commandID":1,"commandInstruction":"Scroll Up","commandAttribute":{"pixelCount":10},"hasCommandBeenExecutedByServer":false}</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:22.214620Z</date>
+  <millis>1576641502214</millis>
+  <nanos>620000</nanos>
+  <sequence>3447</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=897.0922999999999, y=216.00547999999998]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:23.577547Z</date>
+  <millis>1576641503577</millis>
+  <nanos>547000</nanos>
+  <sequence>3485</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=516.6753588235295, y=642.4177705882352]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:24.169659Z</date>
+  <millis>1576641504169</millis>
+  <nanos>659000</nanos>
+  <sequence>3502</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=697.5419, y=652.7821272727273]</message>
+</record>
+<record>
+  <date>2019-12-18T03:58:25.171404Z</date>
+  <millis>1576641505171</millis>
+  <nanos>404000</nanos>
+  <sequence>3530</sequence>
+  <logger>basePack.SensorDataConsumer</logger>
+  <level>FINE</level>
+  <class>basePack.SensorDataConsumer</class>
+  <method>run</method>
+  <thread>25</thread>
+  <message>1 EyeCoordinate [x=458.62772499999994, y=126.84889375]</message>
+</record>
+</log>

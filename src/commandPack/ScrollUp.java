@@ -1,9 +1,12 @@
 package commandPack;
 
-import com.google.gson.Gson;
-
 public class ScrollUp extends CommandAttribute{
 	
+	@Override
+	public String toString() {
+		return "ScrollUp [pixelCount=" + pixelCount + "]";
+	}
+
 	private int pixelCount ;
 
 	public ScrollUp(int pixelCount) {
@@ -19,10 +22,6 @@ public class ScrollUp extends CommandAttribute{
 		this.pixelCount = pixelCount;
 	}
 
-	@Override
-	public String toJSON() {
-		
-		return new Gson().toJson(this) ;
-	}
+
 
 }

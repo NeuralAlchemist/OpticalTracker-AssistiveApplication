@@ -230,6 +230,16 @@ public class FixationSet {
 	public void setCurrentFixationSetFinished(boolean isCurrentFixationSetFinished) {
 		this.isCurrentFixationSetFinished = isCurrentFixationSetFinished;
 	}
+	
+	
+
+	public int getNumberOfEyeCoordinates() {
+		return numberOfEyeCoordinates;
+	}
+
+	public void setNumberOfEyeCoordinates(int numberOfEyeCoordinates) {
+		this.numberOfEyeCoordinates = numberOfEyeCoordinates;
+	}
 
 	/**
 	 * Method to get the {@link dataPack.FixationSet#eyeCoordinatesSet}

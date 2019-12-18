@@ -8,23 +8,34 @@ import com.google.gson.Gson;
 public class Commands {
 	
 	
+	@Override
+	public String toString() {
+		return "Commands [commandID=" + commandID + ", commandInstruction=" + commandInstruction + ", commandAttribute="
+				+ commandAttribute + ", hasCommandBeenExecutedByServer=" + hasCommandBeenExecutedByServer + "]";
+	}
+
+
 	/**
 	 * ID number of the command.
 	 */
+	@SuppressWarnings("unused")
 	private int commandID ;
 	/**
 	 * Actual string instruction of the command.
 	 */
+	@SuppressWarnings("unused")
 	private String commandInstruction ;
 	
 	/**
 	 * Attributes associated with the command.
 	 */
+	@SuppressWarnings("unused")
 	private CommandAttribute commandAttribute ;
 	
 	/**
 	 * To check from Java Code side to see if Node js used up the previous command or not.
 	 */
+	@SuppressWarnings("unused")
 	private boolean hasCommandBeenExecutedByServer ;
 
 	public Commands(String commandInstruction, CommandAttribute commandAttribute) {

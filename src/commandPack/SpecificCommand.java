@@ -1,6 +1,5 @@
 package commandPack;
 
-import com.google.gson.Gson;
 
 public class SpecificCommand extends CommandAttribute {
 
@@ -9,13 +8,6 @@ public class SpecificCommand extends CommandAttribute {
 	private boolean pressButton ;
 
 	
-	@Override
-	public String toJSON() {
-		
-		return new Gson().toJson(this) ;
-	}
-
-
 	@Override
 	public String toString() {
 		return "SpecificCommand [xPos=" + xPos + ", yPos=" + yPos + ", pressButton=" + pressButton + "]";
