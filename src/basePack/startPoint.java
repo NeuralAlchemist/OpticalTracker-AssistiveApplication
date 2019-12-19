@@ -25,6 +25,8 @@ import com.theeyetribe.client.GazeManager.ClientMode;
 import commandPack.JsonToGazeBoxList;
 import dataPack.GazeBox;
 import dataPack.QueueOfFixationSets;
+import userPack.MakeUserProfile;
+import userPack.User;
 
 
 
@@ -48,7 +50,85 @@ public class startPoint {
 	private final static String LogFileLocation = "/Users/sagarshubham/eclipse-java-workspace/"
 			+ "eyeTribe/LOGS/MainLogs.xml" ;
 	private static Logger logger  ;
+	private static int QueueOfFixationSetsDepth = 25 ;
 
+
+	public static void main(String[] args) {
+
+		User user = MakeUserProfile.makeUserProfile();
+//		JFrame frame = new JFrame();
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setSize(300, 300);
+//		frame.setLocation(1000, 200);
+//		frame.setVisible(true);
+//		
+//		
+//		JFrame frame1 = new JFrame();
+//		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame1.setSize(300, 300);
+//		frame1.setLocation(1000, 600);
+//		frame1.setVisible(true);
+//		
+//		createLoggers() ;
+//
+//
+//
+//		final GazeManager gm = GazeManager.getInstance();
+//		boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
+//
+//		if (success)
+//		{
+//			logger.info("Successfully Connected to Eye Tribe Sensor.");
+//		}
+//		else
+//		{
+//			logger.severe("Could not connect to Eye Tribe Sensor!\n"
+//					+ "Check Physical Connections And Restart Code.");
+//			while(true) ;
+//		}
+//
+//
+//
+//
+//		QueueOfFixationSets queueOfFixationSets = new QueueOfFixationSets(QueueOfFixationSetsDepth) ;
+//
+//
+//		final SensorDataProducer gazeProuducerListener = new SensorDataProducer(queueOfFixationSets) ;
+//		gm.addGazeListener(gazeProuducerListener);
+//
+//
+//		ArrayList<GazeBox> gazeBoxList = null;
+//
+//
+//		try 
+//		{
+//			gazeBoxList = JsonToGazeBoxList.getGazeBoxList();
+//		} 
+//		catch (FileNotFoundException e) 
+//		{
+//			logger.log(Level.SEVERE, "Could not find Json file to load button data.\n"
+//					+ "Place it in correct directory and restart the code. ",e) ;
+//			while(true) ;
+//		}
+//
+//		SensorDataConsumer sensorDataConsumer = new SensorDataConsumer(queueOfFixationSets,gazeBoxList) ;
+//
+//		Thread consumerThread = new Thread(sensorDataConsumer) ;
+//		consumerThread.start();
+//
+//
+//		Runtime.getRuntime().addShutdownHook(new Thread()
+//		{
+//			@Override
+//			public void run()
+//			{
+//				gm.removeGazeListener(gazeProuducerListener);
+//				gm.deactivate();
+//			}
+//		});
+
+	}
+	
 	private static void createLoggers()
 	{
 		LogManager logManager = LogManager.getLogManager() ;
@@ -69,84 +149,6 @@ public class startPoint {
 			logger.log(Level.SEVERE,"Cannot Create File Logger!",e) ;
 		}
 	}
-	public static void main(String[] args) {
-
-		
-		JFrame frame = new JFrame();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(300, 300);
-		frame.setLocation(1000, 200);
-		frame.setVisible(true);
-		
-		
-		JFrame frame1 = new JFrame();
-		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame1.setSize(300, 300);
-		frame1.setLocation(1000, 600);
-		frame1.setVisible(true);
-		
-		createLoggers() ;
-
-
-
-		final GazeManager gm = GazeManager.getInstance();
-		boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
-
-		if (success)
-		{
-			logger.info("Successfully Connected to Eye Tribe Sensor.");
-		}
-		else
-		{
-			logger.severe("Could not connect to Eye Tribe Sensor!\n"
-					+ "Check Physical Connections And Restart Code.");
-			while(true) ;
-		}
-
-		System.out.println("Hello, World! Activation: "+ success);
-
-
-
-		QueueOfFixationSets queueOfFixationSets = new QueueOfFixationSets(25) ;
-
-
-		final SensorDataProducer gazeProuducerListener = new SensorDataProducer(queueOfFixationSets) ;
-		gm.addGazeListener(gazeProuducerListener);
-
-
-		ArrayList<GazeBox> gazeBoxList = null;
-
-
-		try 
-		{
-			gazeBoxList = JsonToGazeBoxList.getGazeBoxList();
-		} 
-		catch (FileNotFoundException e) 
-		{
-			logger.log(Level.SEVERE, "Could not find Json file to load button data.\n"
-					+ "Place it in correct directory and restart the code. ",e) ;
-			while(true) ;
-		}
-		for(GazeBox gb : gazeBoxList)
-		{
-			System.out.println(gb);
-		}
-
-		SensorDataConsumer sensorDataConsumer = new SensorDataConsumer(queueOfFixationSets,gazeBoxList) ;
-
-		Thread consumerThread = new Thread(sensorDataConsumer) ;
-		consumerThread.start();
-
-
-		Runtime.getRuntime().addShutdownHook(new Thread()
-		{
-			@Override
-			public void run()
-			{
-				gm.removeGazeListener(gazeProuducerListener);
-				gm.deactivate();
-			}
-		});
-
-	}
+	
+	
 }
