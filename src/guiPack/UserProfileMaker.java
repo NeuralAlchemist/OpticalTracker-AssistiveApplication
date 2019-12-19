@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -44,9 +45,12 @@ public class UserProfileMaker extends JFrame implements ActionListener
 	private User userData ;
 	private boolean isUserDataReady ;
 
+	
+	private ArrayList<User> userList ;
 
-	public UserProfileMaker() 
+	public UserProfileMaker(ArrayList<User> userList) 
 	{
+		this.userList = userList ;
 		this.startPanel = new JPanel() ;
 		this.newUserPanel = new JPanel() ;
 		this.existingUserPanel = new JPanel() ;
@@ -128,12 +132,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 				(int)(Toolkit.getDefaultToolkit().getScreenSize().getHeight()-d.getHeight())/2);
 	}
 
-	public void startUserProfileMakerGUI()
-	{
 
-
-
-	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -149,7 +148,6 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			this.setContentPane(this.newUserPanel);
 			setDimension(newUserPanelDimension);
 			this.setTitle("New User Details");
-			switchToCreateNewUserProfile();
 		}
 		else if (e.getSource() == goBackButton)
 		{
@@ -157,7 +155,6 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			this.setContentPane(this.startPanel);
 			setDimension(startPanelDimension);
 			this.setTitle("User Profile Maker & Selector GUI");
-			startUserProfileMakerGUI();
 		}
 		else if (e.getSource() == addNewUserDetailsButton)
 		{
@@ -198,9 +195,6 @@ public class UserProfileMaker extends JFrame implements ActionListener
 
 
 
-	private void switchToCreateNewUserProfile() {
-
-	}
 
 
 

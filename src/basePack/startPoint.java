@@ -104,9 +104,9 @@ public class startPoint {
 //		{
 //			gazeBoxList = JsonToGazeBoxList.getGazeBoxList();
 //		} 
-//		catch (FileNotFoundException e) 
+//		catch (IOException e) 
 //		{
-//			logger.log(Level.SEVERE, "Could not find Json file to load button data.\n"
+//			logger.log(Level.SEVERE, "We either can't find Json file to load button data, or can't close it after use.\n"
 //					+ "Place it in correct directory and restart the code. ",e) ;
 //			while(true) ;
 //		}
