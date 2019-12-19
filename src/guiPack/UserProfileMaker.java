@@ -4,6 +4,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -168,10 +170,25 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("User Profile Maker & Selector GUI");
 		
+		
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void 	windowClosing(WindowEvent e) {
+				exitGUI() ;
+            }
+
+			
+		});
+		
 
 
 		this.setVisible(true);
 
+	}
+	private void exitGUI() {
+		this.isUserDataReady = true ;
+		this.setVisible(false);
+		this.dispose();		
 	}
 
 	private void setDimension(Dimension d)
@@ -188,6 +205,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 
 		if(e.getSource() == exitWindowButton1 || e.getSource() == exitWindowButton2 || e.getSource() == exitWindowButton3)
 		{
+			this.isUserDataReady = true ;
 			this.setVisible(false);
 			this.dispose();
 		}
