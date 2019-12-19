@@ -49,6 +49,13 @@ public class User {
 	public void setUserErrorProfile(ErrorProfile userErrorProfile) {
 		this.userErrorProfile = userErrorProfile;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", userErrorProfile=" + userErrorProfile + "]";
+	}
 	
 	
 	
