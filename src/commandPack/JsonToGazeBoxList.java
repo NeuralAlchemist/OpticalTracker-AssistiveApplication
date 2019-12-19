@@ -1,8 +1,8 @@
 package commandPack;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ import dataPack.GazeBox;
 public final class JsonToGazeBoxList {
 	private static String ButtonsFilePath = "BUTTONS/BUTTONS.json" ;
 
-	public static ArrayList<GazeBox> getGazeBoxList() throws FileNotFoundException
+	public static ArrayList<GazeBox> getGazeBoxList() throws IOException
 	{
 		ArrayList<GazeBox> gbList = new ArrayList<GazeBox>() ;
 		GsonBuilder gsonBuilder = new GsonBuilder() ;
@@ -78,8 +78,8 @@ public final class JsonToGazeBoxList {
 			GazeBox gb = customgs.fromJson(e, GazeBox.class) ;
 			gbList.add(gb) ;
 		}
-
-
+		
+		br.close();
 
 		return gbList ;
 	}
