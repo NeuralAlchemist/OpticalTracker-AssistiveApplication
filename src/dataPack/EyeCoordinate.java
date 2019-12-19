@@ -103,6 +103,10 @@ public class EyeCoordinate {
 	public String toString() {
 		return "EyeCoordinate [x=" + x + ", y=" + y + "]";
 	}
+	
+	public String toStringGUI() {
+		return "[x=" + x + ", y=" + y + "]";
+	}
 
 	
 

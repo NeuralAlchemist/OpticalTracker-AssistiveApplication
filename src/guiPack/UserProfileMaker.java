@@ -24,15 +24,21 @@ public class UserProfileMaker extends JFrame implements ActionListener
 	private JPanel startPanel ;
 	private JPanel newUserPanel ;
 	private JPanel existingUserPanel ;
+	private JPanel intermediarryPanel ;
 	private JPanel newUserErrorProfilerPanel ;
 
 	private JLabel startPanelHeaderLabel;
 	private JLabel newUserPanelHeaderLabel;
 	private JLabel existingUserPanelHeaderLabel;
-	private JLabel nameLabel;
-	private JLabel ageLabel ;
+	private JLabel newUserNameLabel;
+	private JLabel newUserAgeLabel ;
+	private JLabel newUserSampleSizeLabel ;
 	private JLabel selectedExistingUserNameLabel ;
 	private JLabel selectedExistingUserAgeLabel ;
+	private JLabel selectedExistingUserSampleSizeLabel ;
+	private JLabel selectedExistingUserMeanDeviationLabel ;
+	private JLabel selectedExistingUserVarianceLabel ;
+	private JLabel intermerdiaryPanelLabel ;
 
 	private JButton useExistingUserProfileButton ;
 	private JButton createNewUserProfileButton ;
@@ -40,27 +46,35 @@ public class UserProfileMaker extends JFrame implements ActionListener
 	private JButton exitWindowButton1, exitWindowButton2, exitWindowButton3 ;
 	private JButton goBackButton1,goBackButton2 ;
 	private JButton selectCurrentUserButton ;
+	private JButton intermediaryPanelStartButton ;
+	private JButton intermediaryGoBackButton ;
 
 	private JTextField newUserNameTextField ;
 	private JTextField newUserAgeTextField ;
+	private JTextField newUserSampleSizeTextField ;
 	private JTextField existingUserNameTextField ;
 	private JTextField existingUserAgeTextField ;
-	
-	
+	private JTextField existingUserSampleSizeTextField ;
+	private JTextField existingUserMeanDeviationTextField ;
+	private JTextField existingUserVarianceTextField ;
+
+
 	private JComboBox<String> existingUserListComboBox ;
 
 
 
-	private Dimension startPanelDimension = new Dimension(300, 200) ;
-	private Dimension newUserPanelDimension = new Dimension(255, 200) ;
-	private Dimension existingUserPanelDimension = new Dimension(300,200) ;
-	
+	private Dimension startPanelDimension = new Dimension(272, 200) ;
+	private Dimension newUserPanelDimension = new Dimension(332, 220) ;
+	private Dimension existingUserPanelDimension = new Dimension(380,300) ;
+	private Dimension intermediaryPanelDimension = new Dimension(350,160) ;
+	private Dimension newUserErrorProfilerPanelDimension = Toolkit.getDefaultToolkit().getScreenSize() ;
+
 	private User userData ;
 	private boolean isUserDataReady ;
 	private boolean isUserDataNew ;
 	private ErrorProfile userErrorProfile ;
 
-	
+
 	private ArrayList<User> userList ;
 
 	public UserProfileMaker(ArrayList<User> userList) 
@@ -70,10 +84,12 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.isUserDataReady = false ;
 		this.isUserDataNew = false ;
 		this.userErrorProfile = null ;
-		
+
 		this.startPanel = new JPanel() ;
 		this.newUserPanel = new JPanel() ;
 		this.existingUserPanel = new JPanel() ;
+		this.intermediarryPanel = new JPanel() ;
+		this.newUserErrorProfilerPanel = new JPanel() ;
 
 
 		this.startPanelHeaderLabel = new JLabel() ;
@@ -83,26 +99,40 @@ public class UserProfileMaker extends JFrame implements ActionListener
 				+ "Or Press Exit to close this window.</center></html>") ;
 
 		this.newUserPanelHeaderLabel = new JLabel() ;
-		this.newUserPanelHeaderLabel.setText("<html>Add new User Details.<P></html>");
-		
+		this.newUserPanelHeaderLabel.setText("<html>Add new User Name, Age, and  Sample Size Details.<P></html>");
+ 
 		this.existingUserPanelHeaderLabel = new JLabel() ;
 		this.existingUserPanelHeaderLabel.setText("Select from List of Users.");
 
-		this.nameLabel = new JLabel("Enter User Name: ");
-		this.ageLabel  = new JLabel("Enter User Age:  ") ;
-		
+		this.newUserNameLabel = new JLabel("Enter User Name: ");
+		this.newUserAgeLabel  = new JLabel("Enter User Age:  ") ;
+		this.newUserSampleSizeLabel = new JLabel("Enter User Sample Size:(1-16) ");
+
 		this.selectedExistingUserNameLabel = new JLabel("Selected User's Name: ");
 		this.selectedExistingUserAgeLabel = new JLabel("Selected User's Age: ");
 
+		this.selectedExistingUserSampleSizeLabel = new JLabel("Selected User's Sample Size: ");
+		this.selectedExistingUserMeanDeviationLabel = new JLabel("Selected User's Mean Deviation: ");
+		this.selectedExistingUserVarianceLabel = new JLabel("Selected User's Variance: ");
+
+		this.intermerdiaryPanelLabel = new JLabel("<html><center>Now we will collect Eye Data.<BR>"
+				+ "The Screen will become full screen.<BR>"
+				+ "You need to look at the red dot at all times.<BR>"
+				+ "Do not change screen resolution.<BR>"
+				+ "Press Start to continue.<BR>"
+				+ "Press Back to go back.<BR></center></html>");
+
 		this.useExistingUserProfileButton = new JButton("Use Existing User Profile") ;
-		this.createNewUserProfileButton = new JButton("Create new Existing User Profile") ;
+		this.createNewUserProfileButton = new JButton("Create new User Profile") ;
 		this.addNewUserDetailsButton = new JButton("Add New User Details.") ;
 		this.goBackButton1 = new JButton("Go Back.") ;
 		this.exitWindowButton1 = new JButton("Exit.");
 		this.exitWindowButton2 = new JButton("Exit.");
 		this.exitWindowButton3 = new JButton("Exit.");
-		this.selectCurrentUserButton = new JButton("Select User.") ;
+		this.selectCurrentUserButton = new JButton("Select Current User Details.") ;
 		this.goBackButton2 = new JButton("Go Back.") ;
+		this.intermediaryGoBackButton = new JButton("Go Back.");
+		this.intermediaryPanelStartButton = new JButton("Start");
 
 		this.useExistingUserProfileButton.addActionListener(this);
 		this.createNewUserProfileButton.addActionListener(this);
@@ -113,23 +143,44 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.exitWindowButton3.addActionListener(this);
 		this.selectCurrentUserButton.addActionListener(this);
 		this.goBackButton2.addActionListener(this);
+		this.intermediaryGoBackButton.addActionListener(this);
+		this.intermediaryPanelStartButton.addActionListener(this);
 
 
 		this.newUserNameTextField = new JTextField("") ;
 		this.newUserNameTextField.setColumns(10);
 		this.newUserAgeTextField = new JTextField("") ;
 		this.newUserAgeTextField.setColumns(10);
+		this.newUserSampleSizeTextField = new JTextField("");
+		this.newUserSampleSizeTextField.setColumns(10);
+		
 		this.existingUserNameTextField = new JTextField("") ;
 		this.existingUserNameTextField.setColumns(10);
+		this.existingUserNameTextField.setEditable(false);
+		this.existingUserNameTextField.setText(userList.get(0).getName());
+
 		this.existingUserAgeTextField = new JTextField("") ;
 		this.existingUserAgeTextField.setColumns(10);
-		this.existingUserNameTextField.setEditable(false);
 		this.existingUserAgeTextField.setEditable(false);
-		this.existingUserNameTextField.setText(userList.get(0).getName());
 		this.existingUserAgeTextField.setText(""+userList.get(0).getAge());
 		
-		
-		
+		this.existingUserSampleSizeTextField = new JTextField("");
+		this.existingUserSampleSizeTextField.setColumns(10);
+		this.existingUserSampleSizeTextField.setText(""+userList.get(0).getUserErrorProfile().getNumberOFSamplesForProfile());
+		this.existingUserSampleSizeTextField.setEditable(false);
+
+		this.existingUserMeanDeviationTextField = new JTextField("") ;
+		this.existingUserMeanDeviationTextField.setColumns(10);
+		this.existingUserMeanDeviationTextField.setText(userList.get(0).getUserErrorProfile().getMeanDeviationCoordinate().toStringGUI());
+		this.existingUserMeanDeviationTextField.setEditable(false);
+
+		this.existingUserVarianceTextField = new JTextField("");
+		this.existingUserVarianceTextField.setColumns(10);
+		this.existingUserVarianceTextField.setText(userList.get(0).getUserErrorProfile().getVarianceCoordinate().toStringGUI());
+		this.existingUserVarianceTextField.setEditable(false);
+
+
+
 		this.existingUserListComboBox = new JComboBox<String>() ;
 		for(User u: this.userList)
 		{
@@ -143,24 +194,37 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.startPanel.add(this.exitWindowButton1) ;
 
 		this.newUserPanel.add(this.newUserPanelHeaderLabel);
-		this.newUserPanel.add(this.nameLabel) ;
+		this.newUserPanel.add(this.newUserNameLabel) ;
 		this.newUserPanel.add(this.newUserNameTextField) ;
-		this.newUserPanel.add(this.ageLabel) ;
+		this.newUserPanel.add(this.newUserAgeLabel) ;
 		this.newUserPanel.add(this.newUserAgeTextField) ;
+		this.newUserPanel.add(this.newUserSampleSizeLabel) ;
+		this.newUserPanel.add(this.newUserSampleSizeTextField) ;
 		this.newUserPanel.add(this.addNewUserDetailsButton) ;
 		this.newUserPanel.add(this.goBackButton1) ;
 		this.newUserPanel.add(this.exitWindowButton2) ;
 
-		
+
 		this.existingUserPanel.add(this.existingUserPanelHeaderLabel) ;
 		this.existingUserPanel.add(this.existingUserListComboBox) ;
 		this.existingUserPanel.add(this.selectedExistingUserNameLabel) ;
 		this.existingUserPanel.add(this.existingUserNameTextField) ;
 		this.existingUserPanel.add(this.selectedExistingUserAgeLabel) ;
 		this.existingUserPanel.add(this.existingUserAgeTextField) ;
-		this.existingUserPanel.add(this.selectCurrentUserButton) ;
+		this.existingUserPanel.add(this.selectedExistingUserSampleSizeLabel) ;
+		this.existingUserPanel.add(this.existingUserSampleSizeTextField) ;
+		this.existingUserPanel.add(this.selectedExistingUserMeanDeviationLabel) ;
+		this.existingUserPanel.add(this.existingUserMeanDeviationTextField) ;
+		this.existingUserPanel.add(this.selectedExistingUserVarianceLabel) ;
+		this.existingUserPanel.add(this.existingUserVarianceTextField) ;
 		this.existingUserPanel.add(this.goBackButton2) ;
+		this.existingUserPanel.add(this.selectCurrentUserButton) ;
 		this.existingUserPanel.add(exitWindowButton3);
+
+
+		this.intermediarryPanel.add(this.intermerdiaryPanelLabel);
+		this.intermediarryPanel.add(this.intermediaryGoBackButton) ;
+		this.intermediarryPanel.add(this.intermediaryPanelStartButton) ;
 
 
 
@@ -169,17 +233,17 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		setDimension(startPanelDimension) ;
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("User Profile Maker & Selector GUI");
-		
-		
+
+
 		this.addWindowListener(new WindowAdapter() {
 			@Override
 			public void 	windowClosing(WindowEvent e) {
 				exitGUI() ;
-            }
+			}
 
-			
+
 		});
-		
+
 
 
 		this.setVisible(true);
@@ -229,6 +293,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			boolean dataOk = true ;
 			String name = "";
 			int age = 0;
+			int sampleSize = 0 ;
 			name = this.newUserNameTextField.getText() ;
 			if (name.trim().length() == 0)
 			{
@@ -237,6 +302,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			try 
 			{
 				age = Integer.parseInt(this.newUserAgeTextField.getText());
+				sampleSize = Integer.parseInt(this.newUserSampleSizeTextField.getText()) ;
 			} catch (NumberFormatException e1) {
 				dataOk = false ;
 			}
@@ -244,23 +310,17 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			{
 				dataOk = false;
 			}
+			if(sampleSize < 1 || sampleSize >16)
+			{
+				dataOk = false ;
+			}
 			if (dataOk)
 			{
-				userErrorProfile = new ErrorProfile(0, new EyeCoordinate(0.0, 0.0),new EyeCoordinate(0, 0)) ;
-				
-
+				this.userErrorProfile = new ErrorProfile(sampleSize, new EyeCoordinate(0.0, 0.0),new EyeCoordinate(0, 0)) ;
 				this.userData = new User(name, age, userErrorProfile) ;
-				this.isUserDataNew = true ;
-				System.out.println("From Within is New User: "+isUserDataNew+"\n"+userData);
-
-				
 				this.remove(newUserPanel);
-				//TODO Add Intermediary screen, then new profile panel and fill userErrorProfile.
-
-				this.isUserDataReady = true ;
-				this.setVisible(false);
-				this.dispose();
-				
+				this.setContentPane(this.intermediarryPanel);
+				setDimension(intermediaryPanelDimension);
 			}
 		}
 		else if(e.getSource() == useExistingUserProfileButton)
@@ -275,6 +335,9 @@ public class UserProfileMaker extends JFrame implements ActionListener
 
 			this.existingUserNameTextField.setText(userList.get(existingUserListComboBox.getSelectedIndex()).getName());
 			this.existingUserAgeTextField.setText(""+userList.get(existingUserListComboBox.getSelectedIndex()).getAge());
+			this.existingUserSampleSizeTextField.setText(""+userList.get(existingUserListComboBox.getSelectedIndex()).getUserErrorProfile().getNumberOFSamplesForProfile());
+			this.existingUserMeanDeviationTextField.setText(userList.get(existingUserListComboBox.getSelectedIndex()).getUserErrorProfile().getMeanDeviationCoordinate().toStringGUI() );
+			this.existingUserVarianceTextField.setText(userList.get(existingUserListComboBox.getSelectedIndex()).getUserErrorProfile().getVarianceCoordinate().toStringGUI() );
 			this.userData = userList.get(existingUserListComboBox.getSelectedIndex()) ;
 		}
 		else if (e.getSource() == selectCurrentUserButton)
@@ -284,7 +347,19 @@ public class UserProfileMaker extends JFrame implements ActionListener
 			this.setVisible(false);
 			this.dispose();
 
-//			System.out.println(this.isUserDataNew+" "+this.isUserDataReady+" "+this.userData);
+		}
+		else if(e.getSource() == intermediaryGoBackButton)
+		{
+			this.remove(intermediarryPanel);
+			this.setContentPane(newUserPanel);
+			this.setDimension(newUserPanelDimension);
+		}
+		else if(e.getSource() == intermediaryPanelStartButton)
+		{
+			this.remove(intermediarryPanel);
+			this.setContentPane(newUserErrorProfilerPanel);
+			setDimension(newUserErrorProfilerPanelDimension);
+			updateUserErrorProfile(this.userErrorProfile);
 		}
 		this.validate();
 		this.repaint();
@@ -295,6 +370,19 @@ public class UserProfileMaker extends JFrame implements ActionListener
 
 
 
+	private void updateUserErrorProfile(ErrorProfile userErrorProfile2) {
+		// TODO Get Data From Sensor,
+		System.out.println(this.userData);
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
+		}
+		
+		
+		this.userData.setUserErrorProfile(this.userErrorProfile);
+		this.isUserDataNew = true ;
+		this.isUserDataReady = true ;
+
+	}
 	public boolean isUserDataNew() {
 		return isUserDataNew;
 	}
