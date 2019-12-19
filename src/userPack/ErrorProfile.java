@@ -3,27 +3,27 @@ package userPack;
 import dataPack.EyeCoordinate;
 
 public class ErrorProfile {
-	private int numberOFSamplesForProfile ;
+	private int numberOfSamplesForProfile ;
 	private EyeCoordinate meanDeviationCoordinate ;
 	private EyeCoordinate varianceCoordinate ;
 	
 	
-	public ErrorProfile(int numberOFSamplesForProfile, EyeCoordinate meanDeviationCoordinate,
+	public ErrorProfile(int numberOfSamplesForProfile, EyeCoordinate meanDeviationCoordinate,
 			EyeCoordinate varianceCoordinate) {
 		super();
-		this.numberOFSamplesForProfile = numberOFSamplesForProfile;
+		this.numberOfSamplesForProfile = numberOfSamplesForProfile;
 		this.meanDeviationCoordinate = meanDeviationCoordinate;
 		this.varianceCoordinate = varianceCoordinate;
 	}
 
 
 	public int getNumberOFSamplesForProfile() {
-		return numberOFSamplesForProfile;
+		return numberOfSamplesForProfile;
 	}
 
 
-	public void setNumberOFSamplesForProfile(int numberOFSamplesForProfile) {
-		this.numberOFSamplesForProfile = numberOFSamplesForProfile;
+	public void setNumberOFSamplesForProfile(int numberOfSamplesForProfile) {
+		this.numberOfSamplesForProfile = numberOfSamplesForProfile;
 	}
 
 
@@ -44,6 +44,13 @@ public class ErrorProfile {
 
 	public void setVarianceCoordinate(EyeCoordinate varianceCoordinate) {
 		this.varianceCoordinate = varianceCoordinate;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ErrorProfile [numberOFSamplesForProfile=" + numberOFSamplesForProfile + ", meanDeviationCoordinate="
+				+ meanDeviationCoordinate + ", varianceCoordinate=" + varianceCoordinate + "]";
 	}
 
 }
