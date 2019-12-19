@@ -49,7 +49,7 @@ public class ErrorProfile {
 
 	@Override
 	public String toString() {
-		return "ErrorProfile [numberOFSamplesForProfile=" + numberOFSamplesForProfile + ", meanDeviationCoordinate="
+		return "ErrorProfile [numberOFSamplesForProfile=" + numberOfSamplesForProfile + ", meanDeviationCoordinate="
 				+ meanDeviationCoordinate + ", varianceCoordinate=" + varianceCoordinate + "]";
 	}
 
