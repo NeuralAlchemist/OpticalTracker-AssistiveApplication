@@ -2,6 +2,7 @@ package basePack;
 
 
 
+import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.io.FileNotFoundException;
@@ -25,6 +26,7 @@ import com.theeyetribe.client.GazeManager.ClientMode;
 import commandPack.JsonToGazeBoxList;
 import dataPack.GazeBox;
 import dataPack.QueueOfFixationSets;
+import dataPack.QueueOfSmoothedEyeCoordinates;
 import userPack.MakeUserProfile;
 import userPack.User;
 
@@ -51,6 +53,7 @@ public class startPoint {
 			+ "eyeTribe/LOGS/MainLogs.xml" ;
 	private static Logger logger  ;
 	private static int QueueOfFixationSetsDepth = 25 ;
+	private static int QueueOfSmoothedEyeCoordinatesSize = 400 ;
 
 
 	public static void main(String[] args) {
@@ -69,45 +72,63 @@ public class startPoint {
 		//		frame1.setVisible(true);
 		//		
 		createLoggers() ;
+		
+//		final GazeManager gm = GazeManager.getInstance();
+//		boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
+//
+//		if (success)
+//		{
+//			logger.info("Successfully Connected to Eye Tribe Sensor.");
+//		}
+//		else
+//		{
+//			logger.severe("Could not connect to Eye Tribe Sensor!\n"
+//					+ "Check Physical Connections And Restart Code.");
+//			while(true) ;
+//		}
+
+
+
+
+//		QueueOfFixationSets queueOfFixationSets = new QueueOfFixationSets(QueueOfFixationSetsDepth) ;
+//
+//
+//		final SensorDataProducer gazeProuducerListener = new SensorDataProducer(queueOfFixationSets) ;
+//		gm.addGazeListener(gazeProuducerListener);
+		
+		QueueOfSmoothedEyeCoordinates queueOfSmoothedEyeCoordinates = 
+				new QueueOfSmoothedEyeCoordinates(QueueOfSmoothedEyeCoordinatesSize) ;
+		
 
 		User user =null ;
-		try {
-			user = MakeUserProfile.makeUserProfile();
-		} catch (IOException e) {
+		try 
+		{
+			MakeUserProfile mup = new MakeUserProfile(queueOfSmoothedEyeCoordinates) ;
+			user =mup.makeUserProfile();
+		} 
+		catch (IOException e) {
 			logger.log(Level.SEVERE, "We either can't find Json file to load button data, or can't close it after use.\n"
 					+ "Place it in correct directory and restart the code. ",e);
 			while(true) ;
-		}catch (InterruptedException e)
+		}
+		catch (InterruptedException e)
 		{
-			logger.log(Level.SEVERE, "Sleeping Error in reading from GUI!. Halting process.");
+			logger.log(Level.SEVERE, "Sleeping Error in reading from GUI!. Halting process.", e);
 			while(true) ;
 		}
+		catch (AWTException e)
+		{
+			logger.log(Level.SEVERE, "AWT Error in reading from GUI! due to Robot Class. Halting process.", e);
+			while(true) ;
+
+		}
+
+
 		//		System.out.println(user);
 		//
 		//
-		//		final GazeManager gm = GazeManager.getInstance();
-		//		boolean success = gm.activate(ApiVersion.VERSION_1_0, ClientMode.PUSH);
-		//
-		//		if (success)
-		//		{
-		//			logger.info("Successfully Connected to Eye Tribe Sensor.");
-		//		}
-		//		else
-		//		{
-		//			logger.severe("Could not connect to Eye Tribe Sensor!\n"
-		//					+ "Check Physical Connections And Restart Code.");
-		//			while(true) ;
-		//		}
-		//
-		//
-		//
-		//
-		//		QueueOfFixationSets queueOfFixationSets = new QueueOfFixationSets(QueueOfFixationSetsDepth) ;
-		//
-		//
-		//		final SensorDataProducer gazeProuducerListener = new SensorDataProducer(queueOfFixationSets) ;
-		//		gm.addGazeListener(gazeProuducerListener);
-		//
+		
+
 		//
 		//		ArrayList<GazeBox> gazeBoxList = null;
 		//

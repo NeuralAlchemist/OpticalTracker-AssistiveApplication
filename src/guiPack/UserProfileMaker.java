@@ -1,12 +1,19 @@
 package guiPack;
 
+import java.awt.AWTException;
+import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -16,8 +23,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import dataPack.EyeCoordinate;
+import dataPack.QueueOfSmoothedEyeCoordinates;
+import dataPack.SmoothedEye;
 import userPack.ErrorProfile;
 import userPack.User;
+import userPack.UserEyeData;
 
 public class UserProfileMaker extends JFrame implements ActionListener
 {
@@ -25,7 +35,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 	private JPanel newUserPanel ;
 	private JPanel existingUserPanel ;
 	private JPanel intermediarryPanel ;
-	private JPanel newUserErrorProfilerPanel ;
+	private EyeProfileGuiPanel newUserErrorProfilerPanel ;
 
 	private JLabel startPanelHeaderLabel;
 	private JLabel newUserPanelHeaderLabel;
@@ -69,27 +79,43 @@ public class UserProfileMaker extends JFrame implements ActionListener
 	private Dimension intermediaryPanelDimension = new Dimension(350,160) ;
 	private Dimension newUserErrorProfilerPanelDimension = Toolkit.getDefaultToolkit().getScreenSize() ;
 
+
+
 	private User userData ;
 	private boolean isUserDataReady ;
 	private boolean isUserDataNew ;
 	private ErrorProfile userErrorProfile ;
+	private QueueOfSmoothedEyeCoordinates queueOfSmoothedEyeCoordinates;
 
 
 	private ArrayList<User> userList ;
+	private boolean isUserReadyToViewScreenData ;
+	private Map<Integer, UserEyeData> userEyeDataSet ;
 
-	public UserProfileMaker(ArrayList<User> userList) 
+	public boolean isUserReadyToViewScreenData() {
+		return isUserReadyToViewScreenData;
+	}
+
+
+
+
+	public UserProfileMaker(ArrayList<User> userList, QueueOfSmoothedEyeCoordinates queueOfSmoothedEyeCoordinates) throws AWTException 
 	{
+		this.queueOfSmoothedEyeCoordinates = queueOfSmoothedEyeCoordinates ;
 		this.userList = userList ;
 		this.userData = userList.get(0) ;
 		this.isUserDataReady = false ;
 		this.isUserDataNew = false ;
 		this.userErrorProfile = null ;
+		this.isUserReadyToViewScreenData = false ;
+		this.userEyeDataSet = new HashMap<Integer, UserEyeData>();
+
+
 
 		this.startPanel = new JPanel() ;
 		this.newUserPanel = new JPanel() ;
 		this.existingUserPanel = new JPanel() ;
 		this.intermediarryPanel = new JPanel() ;
-		this.newUserErrorProfilerPanel = new JPanel() ;
 
 
 		this.startPanelHeaderLabel = new JLabel() ;
@@ -100,7 +126,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 
 		this.newUserPanelHeaderLabel = new JLabel() ;
 		this.newUserPanelHeaderLabel.setText("<html>Add new User Name, Age, and  Sample Size Details.<P></html>");
- 
+
 		this.existingUserPanelHeaderLabel = new JLabel() ;
 		this.existingUserPanelHeaderLabel.setText("Select from List of Users.");
 
@@ -153,7 +179,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.newUserAgeTextField.setColumns(10);
 		this.newUserSampleSizeTextField = new JTextField("");
 		this.newUserSampleSizeTextField.setColumns(10);
-		
+
 		this.existingUserNameTextField = new JTextField("") ;
 		this.existingUserNameTextField.setColumns(10);
 		this.existingUserNameTextField.setEditable(false);
@@ -163,7 +189,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		this.existingUserAgeTextField.setColumns(10);
 		this.existingUserAgeTextField.setEditable(false);
 		this.existingUserAgeTextField.setText(""+userList.get(0).getAge());
-		
+
 		this.existingUserSampleSizeTextField = new JTextField("");
 		this.existingUserSampleSizeTextField.setColumns(10);
 		this.existingUserSampleSizeTextField.setText(""+userList.get(0).getUserErrorProfile().getNumberOFSamplesForProfile());
@@ -233,6 +259,7 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		setDimension(startPanelDimension) ;
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("User Profile Maker & Selector GUI");
+		this.setResizable(false);
 
 
 		this.addWindowListener(new WindowAdapter() {
@@ -356,33 +383,78 @@ public class UserProfileMaker extends JFrame implements ActionListener
 		}
 		else if(e.getSource() == intermediaryPanelStartButton)
 		{
+
+			BufferedImage cursorImg = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+			Cursor blankCursor = Toolkit.getDefaultToolkit().createCustomCursor(
+					cursorImg, new Point(0, 0), "blank cursor");
+
+			
 			this.remove(intermediarryPanel);
-			this.setContentPane(newUserErrorProfilerPanel);
+			this.newUserErrorProfilerPanel = new 
+					EyeProfileGuiPanel(userData.getUserErrorProfile().getNumberOFSamplesForProfile()) ;
+			this.setContentPane(this.newUserErrorProfilerPanel);
+			this.getContentPane().setCursor(blankCursor);
 			setDimension(newUserErrorProfilerPanelDimension);
-			updateUserErrorProfile(this.userErrorProfile);
+			this.newUserErrorProfilerPanel.setFocii();
+			this.isUserReadyToViewScreenData = true ;
+			getDataFromSensor() ;
+
+
+
 		}
-		this.validate();
+		//		this.validate();
 		this.repaint();
 	}
 
 
+	private void getDataFromSensor()
+	{
+		int currentPointNumber = newUserErrorProfilerPanel.getCurrentPointCount() ;
+		UserEyeData ued = new UserEyeData();
+		ued.setEyeCoordinate(new EyeCoordinate(newUserErrorProfilerPanel.getxCenter()	, 
+				newUserErrorProfilerPanel.getyCenter()));
+		while(currentPointNumber 
+				< userData.getUserErrorProfile().getNumberOFSamplesForProfile())
+		{
+			System.out.println("Here");
+			SmoothedEye smoothedEyeCoordinate = null;
+			try {
+				smoothedEyeCoordinate = this.queueOfSmoothedEyeCoordinates.getSmoothedEyeCoordinate() ;
 
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
+			if(!newUserErrorProfilerPanel.isCurrentPointStatus())
+			{
+				ued.addSmoothedEyeCoordinate(smoothedEyeCoordinate);
+			}
+			else
+			{
+				this.userEyeDataSet.put(currentPointNumber, ued) ;
+				currentPointNumber = newUserErrorProfilerPanel.getCurrentPointCount() ;
+				ued = new UserEyeData() ;
+				ued.setEyeCoordinate(new EyeCoordinate(newUserErrorProfilerPanel.getxCenter()	, 
+						newUserErrorProfilerPanel.getyCenter()));
+				newUserErrorProfilerPanel.setCurrentPointStatus(false);
+			}
 
-
-
-	private void updateUserErrorProfile(ErrorProfile userErrorProfile2) {
-		// TODO Get Data From Sensor,
-		System.out.println(this.userData);
-		for (int i = 0; i < 10; i++) {
-			System.out.println(i);
+			try {
+				TimeUnit.MILLISECONDS.sleep(25);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		
-		
-		this.userData.setUserErrorProfile(this.userErrorProfile);
-		this.isUserDataNew = true ;
-		this.isUserDataReady = true ;
+		for(Integer pointNumber: this.userEyeDataSet.keySet())
+		{
+			ued = this.userEyeDataSet.get(pointNumber);
+			System.out.println("Point Number: "+ pointNumber+ ued.getEyeCoordinate());
+		}
 
 	}
+
+
+
 	public boolean isUserDataNew() {
 		return isUserDataNew;
 	}

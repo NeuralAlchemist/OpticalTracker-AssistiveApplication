@@ -1,6 +1,7 @@
 package userPack;
 
 
+import java.awt.AWTException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -21,16 +22,24 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 
 import dataPack.EyeCoordinate;
+import dataPack.QueueOfFixationSets;
+import dataPack.QueueOfSmoothedEyeCoordinates;
 import guiPack.UserProfileMaker;
 import userPack.User;
 
-public final class MakeUserProfile {
+public class MakeUserProfile {
 
 	private static String userProfilesFilePath = "USER_PROFILES/USER_PROFILES.json" ;
-	public static User makeUserProfile() throws IOException, InterruptedException {
+	private QueueOfSmoothedEyeCoordinates queueOfSmoothedEyeCoordinates;
+	
+	public MakeUserProfile(QueueOfSmoothedEyeCoordinates queueOfSmoothedEyeCoordinates) {
+		this.queueOfSmoothedEyeCoordinates = queueOfSmoothedEyeCoordinates ;
+	}
+	
+	public User makeUserProfile() throws IOException, InterruptedException, AWTException {
 		ArrayList<User> userList = getUserList() ;
-		User user = userList.get(0) ;// First Value
-		UserProfileMaker userProfileMakerGui = new UserProfileMaker(userList) ;
+		User user = userList.get(0) ; // First Value as default.
+		UserProfileMaker userProfileMakerGui = new UserProfileMaker(userList, this.queueOfSmoothedEyeCoordinates) ;
 
 		System.out.println("Here!");
 		while(!userProfileMakerGui.isUserDataReady())
