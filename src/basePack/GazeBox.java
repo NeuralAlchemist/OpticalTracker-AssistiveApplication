@@ -41,11 +41,11 @@ public class GazeBox {
 public boolean CheckGazeInBox(int[] mean, FixationSet fixationSet) {
 	boolean send = false;
 	if (mean[0] > tl[0] && mean[0] < br[0]) {
-		System.out.println("First if : check x ");
+		//System.out.println("First if : check x ");
 		if(mean[1] > tl[1] && mean[1] < br[1]) {
-			System.out.println("Second if : Checked Y");
+		//	System.out.println("Second if : Checked Y");
 			if(prev_in_box) {
-				System.out.println("Third if :previously in box ");
+				//System.out.println("Third if :previously in box ");
 				cur_milli = fixationSet.getStopTimeStamp();
 				
 			} else {
@@ -53,7 +53,7 @@ public boolean CheckGazeInBox(int[] mean, FixationSet fixationSet) {
 			}
 			prev_in_box = true;
 			if(cur_milli - start_milli > duration) {
-				System.out.println("Send Command");
+				//System.out.println("Send Command");
 				send = true;
 			} 
 		} else {

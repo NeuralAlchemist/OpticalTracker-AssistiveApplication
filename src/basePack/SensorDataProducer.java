@@ -1,11 +1,14 @@
 package basePack;
 
+import java.io.IOException;
+
 import com.theeyetribe.client.IGazeListener;
 import com.theeyetribe.client.data.GazeData;
 
 import dataPack.FixationSet;
 import dataPack.QueueOfFixationSets;
 import dataPack.SmoothedEye;
+
 
 /**
  * Class to receive data from the sensor.<br><p>
@@ -39,6 +42,8 @@ public class SensorDataProducer implements IGazeListener {
 		currentFixationSet = null ;
 	}
 
+	private ReadDetector rd = new ReadDetector();
+
 	/** 
 	 * Overridden Method from IGazeListener to get data from the sensor asynchronously.<br><p>
 	 * The Method, based on the {@link dataPack.SmoothedEye#isFixated}, 
@@ -48,7 +53,20 @@ public class SensorDataProducer implements IGazeListener {
 	 */
 	@Override
 	public void onGazeUpdate(GazeData gazeData) {
-		if(gazeData.isFixated)
+	double tx = gazeData.smoothedCoordinates.x;
+	double ty = gazeData.smoothedCoordinates.y;
+	boolean res = false;
+	try {
+		System.out.println("before");
+		res = rd.update(tx, ty);
+		System.out.println("after");
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	System.out.print(res);
+	System.out.println(" " + rd.getPoints());
+		if(gazeData.isFixated)	
 		{
 			if(currentFixationSet == null)
 			{
