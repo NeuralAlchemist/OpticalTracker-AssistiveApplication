@@ -49,10 +49,15 @@ public class ReadDetector {
 	//private final int longDist = shortDist * 4;
 	
 	/* Medium Up, Long right and left = reset */
+	private final int readStateSize = 10;
+	private final double thresholdRatio = 0.5;
+	private int[] rgb_arr_scroll;
+	private boolean[] readStates = new boolean[readStateSize];
+	private int stateCount = 0;
 	
 	public ReadDetector() {	
-		//this.initFile();
-		System.out.println("Initializing");
+		this.initFile();
+		//System.out.println("Initializing");
 		try {
 			snip = getSnip(1);
 			capture = new File(image_text);
@@ -63,6 +68,7 @@ public class ReadDetector {
 		
 		rgb_arr_read = colorArray(100, Color.BLUE.getRGB());
 		rgb_arr_not_read = colorArray(100, Color.RED.getRGB());
+		rgb_arr_scroll = colorArray(100, Color.GREEN.getRGB());
 	}
 	public Integer getPoints() {
 		return points;
@@ -72,7 +78,8 @@ public class ReadDetector {
 		count  += 1;
 		x += xIn;
 		y += yIn;
-		System.out.println(count);
+		
+		//System.out.println(count);
 		if(count == countMax) {
 			x = x/countMax;
 			y = y/countMax;
@@ -83,13 +90,17 @@ public class ReadDetector {
 			if(points >= 30) {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_read, 0, 10);
 				ImageIO.write(snip, "jpg", capture);
+				readStates[stateCount] = true;
 			}
 			else {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_not_read, 0, 10);
 				ImageIO.write(snip, "jpg", capture);
+				readStates[stateCount] = false;
 			}
+			thresholdScroll();
 			x = 0;
 			y = 0;
+			stateCount = (stateCount + 1)  % readStateSize;	
 		}
 		
 		if(points >= 30) {
@@ -144,13 +155,40 @@ public class ReadDetector {
 				points = 0;
 			}
 		}
+		
 		writeFile((int)diffX, (int)diffY);
 		prev_x = x;
 		prev_y = y;
 		
 	}
 	
-	/*Troubleshoot */
+	private void thresholdScroll() throws IOException {
+		
+		double ratio;
+		if(y >= 700) {
+			System.out.println("Inside threshold region");
+			ratio = getRatio();
+			if(ratio >= thresholdRatio) {
+				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_scroll, 0, 10);
+				ImageIO.write(snip, "jpg", capture);
+				System.out.print(ratio);
+				System.out.println("Scrolling Down");
+			}
+		}
+		
+		
+	}
+	
+	private double getRatio() {
+		int index;
+		double ratio = 0;
+		for(index = 0; index < readStateSize; index++ ) {
+			if(readStates[index])
+				ratio += 1;
+		}
+		return ratio /= readStateSize;
+	}
+	
 	public void initFile() {
 		File f = new File(path_text);
 		try {
@@ -196,7 +234,6 @@ public class ReadDetector {
 		int[] rgb_arr = new int[size];
 		for(int i = 0; i < rgb_arr.length; i++) {
 			rgb_arr[i] = color;
-			//rgb_arr[i] = Color.MAGENTA.getRGB();
 		}
 		return rgb_arr;
 	}

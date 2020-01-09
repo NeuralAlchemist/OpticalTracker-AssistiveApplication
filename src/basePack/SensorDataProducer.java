@@ -55,17 +55,15 @@ public class SensorDataProducer implements IGazeListener {
 	public void onGazeUpdate(GazeData gazeData) {
 	double tx = gazeData.smoothedCoordinates.x;
 	double ty = gazeData.smoothedCoordinates.y;
-	boolean res = false;
+	/*boolean res = false;
 	try {
-		System.out.println("before");
 		res = rd.update(tx, ty);
-		System.out.println("after");
 	} catch (IOException e1) {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	}
 	System.out.print(res);
-	System.out.println(" " + rd.getPoints());
+	System.out.println(" " + rd.getPoints()); */
 		if(gazeData.isFixated)	
 		{
 			if(currentFixationSet == null)
