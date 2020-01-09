@@ -50,10 +50,17 @@ public class ReadDetector {
 	
 	/* Medium Up, Long right and left = reset */
 	private final int readStateSize = 10;
+	private final int coordinateSize = 10;
 	private final double thresholdRatio = 0.5;
+	private final int thresholdCoordY = 700;
+	private final int thresholdTime = 5000;
 	private int[] rgb_arr_scroll;
 	private boolean[] readStates = new boolean[readStateSize];
+	private double[] coordinates = new double[coordinateSize];
 	private int stateCount = 0;
+	private int coordIndex = 0;
+	
+	private long lastScrollTime = 0;
 	
 	public ReadDetector() {	
 		this.initFile();
@@ -97,10 +104,12 @@ public class ReadDetector {
 				ImageIO.write(snip, "jpg", capture);
 				readStates[stateCount] = false;
 			}
+			coordinates[coordIndex] = y;
 			thresholdScroll();
 			x = 0;
 			y = 0;
 			stateCount = (stateCount + 1)  % readStateSize;	
+			coordIndex = (coordIndex + 1) % coordinateSize;
 		}
 		
 		if(points >= 30) {
@@ -165,14 +174,16 @@ public class ReadDetector {
 	private void thresholdScroll() throws IOException {
 		
 		double ratio;
-		if(y >= 700) {
+		if(isCoordBelow() && (java.lang.System.currentTimeMillis() - lastScrollTime > thresholdTime)) {
 			System.out.println("Inside threshold region");
 			ratio = getRatio();
 			if(ratio >= thresholdRatio) {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_scroll, 0, 10);
 				ImageIO.write(snip, "jpg", capture);
+				lastScrollTime = java.lang.System.currentTimeMillis();
 				System.out.print(ratio);
 				System.out.println("Scrolling Down");
+				
 			}
 		}
 		
@@ -187,6 +198,15 @@ public class ReadDetector {
 				ratio += 1;
 		}
 		return ratio /= readStateSize;
+	}
+	
+	private boolean isCoordBelow() {
+		for(int index = 0;  index < coordinateSize; index++) {
+			if(coordinates[index] < thresholdCoordY) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public void initFile() {
