@@ -25,15 +25,7 @@ import java.util.Set;
 public class FixationSet {
 
 
-	/**
-	 * Current ID of the fixation set. <p><br>
-	 * Use this for the auto increment id for each fixation set added to the {@link dataPack.QueueOfFixationSets}
-	 */
-	private int fixationSetID ;
-	/**
-	 * To denote if the last value of the current fixation set has been added to it or not.
-	 */
-	private boolean isCurrentFixationSetFinished ;
+
 	/**
 	 * {@link java.util.Set} of {@link dataPack.SmoothedEye} values which lie within the fixation.
 	 * Implemented as a {@link java.util.HashSet}
@@ -42,10 +34,6 @@ public class FixationSet {
 	/**
 	 * start time of the fixation set in milliseconds.
 	 */
-	/**
-	 * To denote the number of {@link dataPack.EyeCoordinate}s in a fixation set.
-	 */
-	private int numberOfEyeCoordinates ;
 	private long startTimeStamp ;
 	/**
 	 * stop time of the fixation set in milliseconds.
@@ -72,27 +60,6 @@ public class FixationSet {
 		this.startTimeStamp = startTimeStamp;
 		this.eyeCoordinatesSet = new HashSet<SmoothedEye>() ;
 		this.meanEyeCoordinate = null ;
-		this.isCurrentFixationSetFinished = false ;
-		this.numberOfEyeCoordinates = 0 ;
-	}
-	
-	/**
-	 * Constructor to initialize fixation set.<br>
-	 * As the usage is now that a fixation set ID is assigned to each fixation set, we 
-	 * use two arguments for each of those requirements respectively.
-	 * @param startTimeStamp To initialize the {@link dataPack.FixationSet#startTimeStamp} value of the fixation set.
-	 * @param fixationSetID To initialize the {@link dataPack.FixationSet#fixationSetID} value of the fixation set.
-	 */
-	public FixationSet(long startTimeStamp, int fixationSetID)
-	{
-		super() ;
-		this.startTimeStamp = startTimeStamp;
-		this.eyeCoordinatesSet = new HashSet<SmoothedEye>() ;
-		this.meanEyeCoordinate = null ;
-		this.isCurrentFixationSetFinished = false ;
-		this.numberOfEyeCoordinates = 0 ;
-		this.fixationSetID = fixationSetID ;
-		
 	}
 
 	/**
@@ -109,7 +76,6 @@ public class FixationSet {
 		this.stopTimeStamp = eyeValue.getTimeStamp() ;
 		updateMeanEyeCoordinate(eyeValue) ;
 		updateTopLeftAndBottomRightEyeCoordinates(eyeValue) ;
-		this.numberOfEyeCoordinates = this.eyeCoordinatesSet.size() ;
 
 	}
 	
@@ -195,50 +161,6 @@ public class FixationSet {
 			this.meanEyeCoordinate.setX(newMeanX) ;
 			this.meanEyeCoordinate.setY(newMeanY) ;
 		}
-	}
-	
-	
-
-	/**
-	 * Method to get the {@link dataPack.FixationSet#fixationSetID}
-	 * @return {@link dataPack.FixationSet#fixationSetID}
-	 */
-	public int getFixationSetID() {
-		return fixationSetID;
-	}
-
-	/**
-	 * Method to set the {@link dataPack.FixationSet#fixationSetID}
-	 * @param fixationSetID incremental values of fixation set as IDs.
-	 */
-	public void setFixationSetID(int fixationSetID) {
-		this.fixationSetID = fixationSetID;
-	}
-
-	/**
-	 * Method to get the {@link dataPack.FixationSet#isCurrentFixationSetFinished}
-	 * @return {@link dataPack.FixationSet#isCurrentFixationSetFinished}
-	 */
-	public boolean isCurrentFixationSetFinished() {
-		return isCurrentFixationSetFinished;
-	}
-
-	/**
-	 * Method to set the {@link dataPack.FixationSet#isCurrentFixationSetFinished}
-	 * @param isCurrentFixationSetFinished If last value of the fixation set has been added to it or not.
-	 */
-	public void setCurrentFixationSetFinished(boolean isCurrentFixationSetFinished) {
-		this.isCurrentFixationSetFinished = isCurrentFixationSetFinished;
-	}
-	
-	
-
-	public int getNumberOfEyeCoordinates() {
-		return numberOfEyeCoordinates;
-	}
-
-	public void setNumberOfEyeCoordinates(int numberOfEyeCoordinates) {
-		this.numberOfEyeCoordinates = numberOfEyeCoordinates;
 	}
 
 	/**
