@@ -12,13 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 
 public class ReadDetector {
-	private static String path_text = "D:/Google Drive/UU/M2S1/ECP/Read.txt";
-	private static String image_text = "D:/Google Drive/UU/M2S1/ECP/ReadCapture.jpg";
+	private static String path_text = "ReadTextFolder/Read.txt";
+	private static String image_path = "ReadCaptureJPGFolder/ReadCapture";
+	private double ScreenHeight = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+	
 	private BufferedImage snip;
 	private File capture;
 	private int[] rgb_arr_read;
@@ -52,7 +57,7 @@ public class ReadDetector {
 	private final int readStateSize = 10;
 	private final int coordinateSize = 10;
 	private final double thresholdRatio = 0.5;
-	private final int thresholdCoordY = 700;
+	private final int thresholdCoordY = (int) ScreenHeight * (2 / 3);
 	private final int thresholdTime = 5000;
 	private int[] rgb_arr_scroll;
 	private boolean[] readStates = new boolean[readStateSize];
@@ -61,13 +66,18 @@ public class ReadDetector {
 	private int coordIndex = 0;
 	
 	private long lastScrollTime = 0;
+	private static int id = 0 ;
+	
+	
+	private double scrollFactor = 5.5 ;
+	private JavaToPynputCommandSender jpcs ;
 	
 	public ReadDetector() {	
 		this.initFile();
 		//System.out.println("Initializing");
 		try {
-			snip = getSnip(1);
-			capture = new File(image_text);
+			snip = getSnip(1000);
+			capture =  fileCreator();
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -76,12 +86,22 @@ public class ReadDetector {
 		rgb_arr_read = colorArray(100, Color.BLUE.getRGB());
 		rgb_arr_not_read = colorArray(100, Color.RED.getRGB());
 		rgb_arr_scroll = colorArray(100, Color.GREEN.getRGB());
+		this.jpcs = new JavaToPynputCommandSender() ;
 	}
 	public Integer getPoints() {
 		return points;
 	} 
 	
-	public boolean update(double xIn, double yIn) throws IOException{
+	private static File fileCreator()
+	{
+		String date = id+".jpg" ;
+		id++;
+//				new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime()) ;
+		String imageFilePath = image_path + date;		
+		return new File(imageFilePath) ;
+		
+	}
+	public boolean update(double xIn, double yIn){
 		count  += 1;
 		x += xIn;
 		y += yIn;
@@ -96,12 +116,22 @@ public class ReadDetector {
 			
 			if(points >= 30) {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_read, 0, 10);
-				ImageIO.write(snip, "jpg", capture);
+				try {
+					ImageIO.write(snip, "jpg", capture);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				readStates[stateCount] = true;
 			}
 			else {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_not_read, 0, 10);
-				ImageIO.write(snip, "jpg", capture);
+				try {
+					ImageIO.write(snip, "jpg", capture);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				readStates[stateCount] = false;
 			}
 			coordinates[coordIndex] = y;
@@ -118,7 +148,7 @@ public class ReadDetector {
 		return false;
 	}
 	
-	private void updatePoints() throws IOException {
+	private void updatePoints()  {
 		
 		double diffX = x - prev_x;
 		double diffY = y - prev_y;
@@ -171,7 +201,7 @@ public class ReadDetector {
 		
 	}
 	
-	private void thresholdScroll() throws IOException {
+	private void thresholdScroll()  {
 		
 		double ratio;
 		if(isCoordBelow() && (java.lang.System.currentTimeMillis() - lastScrollTime > thresholdTime)) {
@@ -179,10 +209,25 @@ public class ReadDetector {
 			ratio = getRatio();
 			if(ratio >= thresholdRatio) {
 				snip.setRGB((int)x, (int)y, 10, 10, rgb_arr_scroll, 0, 10);
-				ImageIO.write(snip, "jpg", capture);
+				try {
+					ImageIO.write(snip, "jpg", capture);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				jpcs.scrollMouse(0, -(int) (this.ScreenHeight/scrollFactor));
+				try {
+					snip = getSnip(500);
+					capture =  fileCreator();
+				} catch (AWTException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				lastScrollTime = java.lang.System.currentTimeMillis();
 				System.out.print(ratio);
 				System.out.println("Scrolling Down");
+				
+				//jpcs.scrollMouse(0, -(int) (this.ScreenHeight/scrollFactor));
 				
 			}
 		}
@@ -242,7 +287,8 @@ public class ReadDetector {
 		BufferedImage snip = new Robot().createScreenCapture(screensnip);
 		
 		try {
-			TimeUnit.SECONDS.sleep(timeout);
+			TimeUnit.MILLISECONDS.sleep(timeout);
+			//TimeUnit.SECONDS.sleep(timeout);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -32,28 +32,28 @@ public class startPoint {
 
 	public static void main(String[] args) {
 		
-		JFrame frame = new JFrame();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(300, 300);
-		JPanel jp = new JPanel();
-		frame.setLocation(1500, 200);
-		JPanel rectangle = new JPanel();
-		rectangle.setBackground( Color.RED );
-		rectangle.setPreferredSize( new Dimension(50, 50) );
-		jp.add( rectangle );
-		frame.setVisible(true);
-		
-		
-		JFrame frame1 = new JFrame();
-		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame1.setSize(300, 300);
-		JPanel jp1 = new JPanel();
-		frame1.setLocation(1500, 600);
-		JPanel rectangle1 = new JPanel();
-		rectangle1.setBackground( Color.RED );
-		rectangle1.setPreferredSize( new Dimension(50, 50) );
-		jp1.add( rectangle1 );
-		frame1.setVisible(true);
+//		JFrame frame = new JFrame();
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setSize(300, 300);
+//		JPanel jp = new JPanel();
+//		frame.setLocation(1500, 200);
+//		JPanel rectangle = new JPanel();
+//		rectangle.setBackground( Color.RED );
+//		rectangle.setPreferredSize( new Dimension(50, 50) );
+//		jp.add( rectangle );
+//		frame.setVisible(true);
+//		
+//		
+//		JFrame frame1 = new JFrame();
+//		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame1.setSize(300, 300);
+//		JPanel jp1 = new JPanel();
+//		frame1.setLocation(1500, 600);
+//		JPanel rectangle1 = new JPanel();
+//		rectangle1.setBackground( Color.RED );
+//		rectangle1.setPreferredSize( new Dimension(50, 50) );
+//		jp1.add( rectangle1 );
+//		frame1.setVisible(true);
 		
 		
 		final GazeManager gm = GazeManager.getInstance();
